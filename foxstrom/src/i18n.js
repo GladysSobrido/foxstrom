@@ -21,23 +21,6 @@ i18n
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
     fallbackLng: "de",
-    resources: {
-      de: {
-        translation: {
-          learn: "Lerne React",
-          edit: "Bitte <1>src/App.jsx</1> bearbeiten und speichern, um HMR zu testen",
-          description:
-            "Klicken Sie auf die Logos von Vite und React, um mehr zu erfahren",
-        },
-      },
-      en: {
-        translation: {
-          learn: "Learn React",
-          edit: "Edit<1>src/App.jsx</1> and save to reload",
-          description: "Click over the logos of Vite and React, to learn more",
-        },
-      },
-    },
     debug: true,
 
     interpolation: {
