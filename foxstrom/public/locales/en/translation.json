@@ -3,5 +3,9 @@
   "edit": "Edit<1>src/App.jsx</1> and save to reload",
   "description": "Click over the logos of Vite and React, to learn more",
 
-  "strom1": "The green energy tarifs of FoxStrom"
+  "strom1": "The green energy tarifs of FoxStrom",
+
+  "menu1": "ELECTRICITY",
+  "menu2": "SOLAR PANELS",
+  "menu3": "CHARGING-STATIONS"
 }

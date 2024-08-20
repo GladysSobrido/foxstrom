@@ -3,5 +3,9 @@
   "edit": "Bitte <1>src/App.jsx</1> bearbeiten und speichern, um HMR zu testen",
   "description": "Klicken Sie auf die Logos von Vite und React, um mehr zu erfahren",
 
-  "strom1": "Die Ökostrom-Tarife von FoxStrom"
+  "strom1": "Die Ökostrom-Tarife von FoxStrom",
+
+  "menu1": "STROM",
+  "menu2": "SOLARANLAGE",
+  "menu3": "LADESTATIONEN"
 }
