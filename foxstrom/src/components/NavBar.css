@@ -4,12 +4,11 @@
   color: var(--color-primary);
   display: flex;
   flex-direction: row;
-
   justify-content: space-between;
 }
 .menu {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
 }
 .menu a {
   color: var(--color-primary);
