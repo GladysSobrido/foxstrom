@@ -18,15 +18,19 @@ export function NavBar() {
         <img src="src/assets/logo_with_text.png"></img>
         <div>
           <ul className="menu">
-            <NavLink to={"/Strom"}>
-              <Trans i18nKey="menu1">STROM</Trans>
-            </NavLink>
-            <NavLink to={"/Solaranlage"}>
-              <Trans i18nKey="menu2">SOLARANLAGE</Trans>
-            </NavLink>
-            <NavLink to={"/Ladestationen"}>
-              <Trans i18nKey="menu3">LADESTATIONEN</Trans>
-            </NavLink>
+            <div>
+              <NavLink to={"/Strom"}>
+                <Trans i18nKey="menu1">STROM</Trans>
+              </NavLink>
+            </div>
+            <div>
+              <NavLink to={"/Solaranlage"}>
+                <Trans i18nKey="menu2">SOLARANLAGE</Trans>
+              </NavLink>
+            </div>
+            <div>
+              <NavLink to={"/Ladestationen"}>{t("menu3")}</NavLink>
+            </div>
           </ul>
         </div>
         <div>

@@ -3,7 +3,13 @@
   background-color: white;
   color: var(--color-primary);
   display: flex;
+  flex-direction: row;
+
   justify-content: space-between;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
 }
 .menu a {
   color: var(--color-primary);
