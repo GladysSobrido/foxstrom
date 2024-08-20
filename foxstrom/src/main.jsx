@@ -1,13 +1,46 @@
+//import "./index.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
-
 // import i18n (needs to be bundled ;))
 import "./i18n";
 
+//routing
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import pages
+import Home from "./pages/Home";
+import Kontakt from "./pages/Kontakt.jsx";
+//import { Test } from "./pages/Test.jsx";
+import { RootLayout } from "./RootLayout";
+import { Solaranlage } from "./pages/Solaranlage.jsx";
+import { Ladestationen } from "./pages/Ladestationen.jsx";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "solar",
+        element: <Solaranlage />,
+      },
+      {
+        path: "lade",
+        element: <Ladestationen />,
+      },
+      {
+        path: "kontakt",
+        element: <Kontakt />,
+      },
+    ],
+  },
+]);
+//...
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>
 );

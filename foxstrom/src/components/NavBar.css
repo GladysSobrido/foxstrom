@@ -1,0 +1,15 @@
+@import "../styles/constants.css";
+.navbar {
+  background-color: white;
+  color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+}
+.menu a {
+  color: var(--color-primary);
+  text-decoration: none;
+  margin: 10px;
+}
+img {
+  height: 50px;
+}
