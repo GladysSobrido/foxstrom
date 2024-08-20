@@ -9,7 +9,17 @@
   color: var(--color-primary);
   text-decoration: none;
   margin: 10px;
+  font-weight: 600;
 }
 img {
   height: 50px;
+}
+button {
+  border: 0px;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+button:disabled {
+  color: black;
+  font-weight: 600;
 }
