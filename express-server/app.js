@@ -2,8 +2,20 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
+const connect = require("./lib/connect");
+const Plz = require("./models/plz");
+const Verbrauch = require("./models/verbrauch");
 
 app.get("/", (req, res) => res.type("html").send(html));
+
+app.get("/verbrauch", async (req, res) => {
+  await connect();
+  const verbrauchListe = await Verbrauch.find();
+  if (!verbrauchListe.length) {
+    return res.json({ message: "Consumption not found" });
+  }
+  return res.json(verbrauchListe);
+});
 
 const server = app.listen(port, () =>
   console.log(`Express app listening on port ${port}!`)
@@ -16,7 +28,7 @@ const html = `
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello from Render!</title>
+    <title>Welcome to the backend of FoxStrom</title>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script>
       setTimeout(() => {
