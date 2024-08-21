@@ -1,9 +1,19 @@
 .hero {
   display: flex;
   flex-direction: row;
+  background-color: var(--color-primary);
 }
 .herotext {
-  max-width: 500px;
+  max-width: 400px;
+  color: white;
+  text-align: left;
+  margin-top: 100px;
+  margin-bottom: auto;
+  padding: 10px;
+  max-height: fit-content;
+  grid-column-start: 2;
+  font-weight: 500;
+  border: 1px solid white;
 }
 .foxhunting {
   height: 5%;
