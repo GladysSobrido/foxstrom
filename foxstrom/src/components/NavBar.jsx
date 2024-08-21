@@ -15,7 +15,7 @@ export function NavBar() {
   return (
     <header>
       <nav className="navbar">
-        <img src="src/assets/logo_with_text.png"></img>
+        <img className="logo" src="src/assets/logo_with_text.png"></img>
         <div>
           <ul className="menu">
             <div>

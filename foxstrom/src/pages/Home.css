@@ -1,0 +1,52 @@
+.hero {
+  background-color: var(--color-primary);
+}
+.herotext {
+  padding: 10px;
+  max-height: fit-content;
+  font-weight: 500;
+  border: 1px solid white;
+  color: white;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: end;
+  }
+  .herotext {
+    grid-column-start: 2;
+    align-items: end;
+    max-width: 400px;
+    margin-top: 100px;
+    margin-bottom: auto;
+    margin-right: 30%;
+  }
+  .foxhunting {
+    grid-column-start: 1;
+    justify-content: end;
+    align-items: end;
+    height: 130%;
+    margin-top: -180px;
+  }
+  .rechner {
+    margin-top: -400px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .herotext {
+    max-width: 80%;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  .foxhunting {
+    max-width: 40%;
+    align-self: center;
+  }
+}
