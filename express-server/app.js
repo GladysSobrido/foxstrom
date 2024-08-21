@@ -8,7 +8,7 @@ const Verbrauch = require("./models/verbrauch");
 
 app.get("/", (req, res) => res.type("html").send(html));
 
-app.get("/verbrauch", async (req, res) => {
+app.get("/verbrauchListe", async (req, res) => {
   await connect();
   const verbrauchListe = await Verbrauch.find();
   if (!verbrauchListe.length) {
@@ -69,7 +69,7 @@ const html = `
   </head>
   <body>
     <section>
-      Hello from Render!
+      Welcome to the backend of FoxStrom.
     </section>
   </body>
 </html>
