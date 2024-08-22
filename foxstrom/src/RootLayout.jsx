@@ -8,12 +8,10 @@ export function RootLayout() {
   const { t } = useTranslation();
   return (
     <>
-      <header>
-        <NavBar />
-      </header>
-      <main>
-        <Outlet />
-      </main>
+      <NavBar />
+
+      <Outlet />
+
       <footer>
         <p>{t("Copyright Taktsoft Campus")}</p>
       </footer>

@@ -13,6 +13,7 @@ import Kontakt from "./pages/Kontakt.jsx";
 import { RootLayout } from "./RootLayout";
 import { Solaranlage } from "./pages/Solaranlage.jsx";
 import { Ladestationen } from "./pages/Ladestationen.jsx";
+import { Strom } from "./pages/Strom.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "strom",
+        element: <Strom />,
       },
       {
         path: "solar",

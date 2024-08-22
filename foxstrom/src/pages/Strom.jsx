@@ -1,6 +1,5 @@
-import "./i18n";
 import { Trans } from "react-i18next";
-function Strom() {
+export function Strom() {
   return (
     <>
       <main>
