@@ -8,13 +8,22 @@ const Verbrauch = require("./models/verbrauch");
 
 app.get("/", (req, res) => res.type("html").send(html));
 
-app.get("/verbrauchListe", async (req, res) => {
+app.get("/verbrauch", async (req, res) => {
   await connect();
-  const verbrauchListe = await Verbrauch.find();
-  if (!verbrauchListe.length) {
+  const verbrauch = await Verbrauch.find();
+  if (!verbrauch.length) {
     return res.json({ message: "Consumption not found" });
   }
-  return res.json(verbrauchListe);
+  return res.json(verbrauch);
+});
+
+app.get("/plz", async (req, res) => {
+  await connect();
+  const plz = await Plz.find();
+  if (!plz.length) {
+    return res.json({ message: "Postleitzahl list not found" });
+  }
+  return res.json(plz);
 });
 
 const server = app.listen(port, () =>

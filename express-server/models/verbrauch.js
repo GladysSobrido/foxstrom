@@ -6,5 +6,6 @@ const verbrauchSchema = new Schema({
 });
 
 const Verbrauch =
-  mongoose.models.verbrauch || mongoose.model("Verbrauch", verbrauchSchema);
+  mongoose.models.verbrauch ||
+  mongoose.model("Verbrauch", verbrauchSchema, "verbrauch");
 module.exports = Verbrauch;
