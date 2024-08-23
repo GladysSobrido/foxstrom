@@ -2,6 +2,12 @@ import "./NavBar.css";
 import { Link } from "react-router-dom";
 
 import { NavLink } from "react-router-dom";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 
 //Translation
 // import React, { Suspense } from "react";
@@ -53,6 +59,14 @@ export function NavBar() {
           </button>
         ))}
       </div>
+      <header>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      </header>
     </nav>
   );
 }
