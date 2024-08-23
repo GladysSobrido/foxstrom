@@ -5,5 +5,5 @@ const plzSchema = new Schema({
   fee: { type: Number, required: true },
 });
 
-const Plz = mongoose.models.plz || mongoose.model("Plz", plzSchema);
+const Plz = mongoose.models.plz || mongoose.model("Plz", plzSchema, "plz");
 module.exports = Plz;

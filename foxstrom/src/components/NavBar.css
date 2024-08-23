@@ -17,6 +17,12 @@
   margin: 10px;
   font-weight: 600;
 }
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  margin: 10px;
+  font-weight: 600;
+}
 .logo {
   height: 50px;
 }
