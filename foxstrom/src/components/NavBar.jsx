@@ -39,6 +39,9 @@ export function NavBar() {
         </ul>
       </div>
       <div>
+        <NavLink to={"/login"}>{t("login")}</NavLink>
+      </div>
+      <div>
         {Object.keys(lngs).map((lng) => (
           <button
             type="submit"
