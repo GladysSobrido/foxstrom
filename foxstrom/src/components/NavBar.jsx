@@ -1,7 +1,13 @@
 import "./NavBar.css";
 import { Link } from "react-router-dom";
-
+//Authentication mit Clerk
 import { NavLink } from "react-router-dom";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 
 //Translation
 // import React, { Suspense } from "react";
@@ -16,7 +22,7 @@ export function NavBar() {
   return (
     <nav className="navbar">
       <Link to={"/"}>
-        <img className="logo" src="src/assets/logo_with_text.png"></img>
+        <img className="logo" src="/logo_with_text.png"></img>
       </Link>
       <div>
         <ul className="menu">
@@ -38,9 +44,9 @@ export function NavBar() {
           </div>
         </ul>
       </div>
-      <div>
+      {/* <div>
         <NavLink to={"/login"}>{t("login")}</NavLink>
-      </div>
+      </div> */}
       <div>
         {Object.keys(lngs).map((lng) => (
           <button
@@ -53,6 +59,14 @@ export function NavBar() {
           </button>
         ))}
       </div>
+      <header>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      </header>
     </nav>
   );
 }

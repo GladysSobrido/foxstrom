@@ -6,4 +6,8 @@ form {
   border-color: black;
   padding: 20px;
   background-color: white;
+  color: ligth-dark(rgba(0, 0, 0, 0.87), white);
+}
+label {
+  color: rgba(0, 0, 0, 0.87);
 }

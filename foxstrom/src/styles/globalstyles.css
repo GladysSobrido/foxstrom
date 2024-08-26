@@ -6,8 +6,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #ffffff;
+  color: ligth-dark(rgba(0, 0, 0, 0.87), white);
+  background-color: ligth-dark(#ffffff, rgb(16, 16, 16));
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,11 +19,18 @@
   padding: 0rem;
   text-align: center;
 }
-main {
+
+.kontakt {
+  background-color: ligth-dark(white, white);
   max-width: 1200px;
   margin: auto;
 }
-
 header {
-  min-height: 300px;
+  /* min-height: 300px; */
+  color: black;
+}
+button {
+  padding: 10px;
+  border: 0px;
+  border-radius: 5px;
 }
