@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <div className="hero">
-        <img className="foxhunting" src="src/assets/wild-fox_line.png"></img>
+        <img className="foxhunting" src="/wild-fox_line.png"></img>
         <div className="herotext">
           <h1>{t("hero_title")}</h1>
           <p>{t("hero_paragraph")}</p>

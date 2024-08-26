@@ -1,6 +1,6 @@
 import "./NavBar.css";
 import { Link } from "react-router-dom";
-
+//Authentication mit Clerk
 import { NavLink } from "react-router-dom";
 import {
   SignedIn,
@@ -22,7 +22,7 @@ export function NavBar() {
   return (
     <nav className="navbar">
       <Link to={"/"}>
-        <img className="logo" src="src/assets/logo_with_text.png"></img>
+        <img className="logo" src="/logo_with_text.png"></img>
       </Link>
       <div>
         <ul className="menu">
@@ -44,9 +44,9 @@ export function NavBar() {
           </div>
         </ul>
       </div>
-      <div>
+      {/* <div>
         <NavLink to={"/login"}>{t("login")}</NavLink>
-      </div>
+      </div> */}
       <div>
         {Object.keys(lngs).map((lng) => (
           <button
