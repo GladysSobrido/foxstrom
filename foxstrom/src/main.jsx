@@ -17,6 +17,7 @@ import { Login } from "./pages/Login.jsx";
 import PrivateLayout from "../PrivateLayout.jsx";
 import PrivatePage from "./pages/private/index.jsx";
 import InvoicesPage from "./pages/private/invoices.jsx";
+import { Tarifs } from "./pages/Tarifs.jsx";
 
 // Clerk: Import your publishable key
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "tarifs",
+        element: <Tarifs />,
       },
       {
         element: <PrivateLayout />,
