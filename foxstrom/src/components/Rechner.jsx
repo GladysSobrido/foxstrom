@@ -1,28 +1,23 @@
 import "./Rechner.css";
 import { useState } from "react";
-import axios from "axios";
-export function Rechner() {
-  const API = "https://foxstrom.onrender.com";
 
-  async function handleLoadData() {
-    const response = await axios.get(API);
-    console.log(response.data);
-  }
+export function Rechner({ onSubmitData }) {
+  const [plz, setPlz] = useState();
+  const [anzahl, setAnzahl] = useState();
+  const [verbrauch, setVerbrauch] = useState();
 
-  let [verbrauch, setVerbrauch] = useState();
-  let [plz, setPlz] = useState();
-  let [anzahl, setAnzahl] = useState();
-
-  function handleSubmit(event) {
+  function handleSubmitData(event) {
     event.preventDefault();
+    onSubmitData(plz, anzahl, verbrauch);
   }
+
   return (
     <>
       <h2>Wirklich Ökostrom berechnen</h2>
       <form
-        action="/tarifs?"
+        action="/tarifs"
         onSubmit={(event) => {
-          handleSubmit(event);
+          handleSubmitData(event);
         }}
       >
         Lass uns wissen etweder der Anzahl von Personnen im Haushalt oder Ihres
@@ -55,9 +50,7 @@ export function Rechner() {
             ></input>
           </div>
         </div>
-        <button type="submit" onClick={() => handleLoadData}>
-          Preis berechnen
-        </button>
+        <button type="submit">Preis berechnen</button>
       </form>
     </>
   );
