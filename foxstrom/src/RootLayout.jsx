@@ -31,7 +31,7 @@ export function RootLayout() {
         <NavBar />
         <Outlet />
         <footer>
-          <p>{t("Copyright Taktsoft Campus")}</p>
+          <p>{t("copyright")}</p>
         </footer>
       </ClerkProvider>
     </>

@@ -7,10 +7,6 @@ import { Rechner } from "../components/Rechner";
 function Home() {
   const { t } = useTranslation();
 
-  const [group, setGroup] = useState();
-  const [range, setRange] = useState();
-  const [message, setMessage] = useState();
-
   return (
     <>
       <div className="hero">
@@ -21,11 +17,11 @@ function Home() {
         </div>
         <div className="rechner">
           <Rechner
-            onSubmitData={(verbrauch, anzahl, plz) => {
-              setMessage("");
-              handleChangeVerbrauch(verbrauch, anzahl);
-              handleChangePlz(plz);
-            }}
+          // onSubmitData={(verbrauch, anzahl, plz) => {
+          //   setMessage("");
+          //   handleChangeVerbrauch(verbrauch, anzahl);
+          //   handleChangePlz(plz);
+          // }}
           />
         </div>
       </div>

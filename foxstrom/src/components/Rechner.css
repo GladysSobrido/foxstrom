@@ -1,6 +1,7 @@
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   border: solid 1px;
   /* border-radius: 20px; */
   border-color: black;
@@ -10,4 +11,16 @@ form {
 }
 label {
   color: rgba(0, 0, 0, 0.87);
+}
+input {
+  width: 180px;
+  margin: 3px;
+}
+.buttonRechner {
+  margin: 20px;
+}
+.inputFields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
