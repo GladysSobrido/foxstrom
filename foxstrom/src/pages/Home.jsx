@@ -16,7 +16,13 @@ function Home() {
           <p>{t("hero_paragraph")}</p>
         </div>
         <div className="rechner">
-          <Rechner />
+          <Rechner
+          // onSubmitData={(verbrauch, anzahl, plz) => {
+          //   setMessage("");
+          //   handleChangeVerbrauch(verbrauch, anzahl);
+          //   handleChangePlz(plz);
+          // }}
+          />
         </div>
       </div>
     </>
