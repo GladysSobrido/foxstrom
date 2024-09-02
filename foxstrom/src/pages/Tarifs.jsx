@@ -84,7 +84,14 @@ export function Tarifs() {
   console.log(foxTax);
   foxPreis = foxNettPreis + foxTax;
   console.log(foxPreis);
-  foxTarif = [{ totalPrice: foxPreis, nettPrice: foxNettPreis, tax: foxTax }];
+  foxTarif = [
+    {
+      tarifName: "FoxTarif",
+      totalPrice: foxPreis,
+      nettPrice: foxNettPreis,
+      tax: foxTax,
+    },
+  ];
   return (
     <>
       <Rechner />

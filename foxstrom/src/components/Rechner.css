@@ -8,6 +8,7 @@ form {
   padding: 20px;
   background-color: white;
   color: ligth-dark(rgba(0, 0, 0, 0.87), white);
+  width: 450px;
 }
 label {
   color: rgba(0, 0, 0, 0.87);
