@@ -39,6 +39,7 @@ button {
   gap: 0px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 80px;
 }
 .homecard {
   display: block;
@@ -51,6 +52,15 @@ button {
   font-weight: 600;
   font-size: 50px;
 }
+.bg {
+  color: light-dark(rgb(0, 0, 0), rgb(198, 198, 198));
+  background-color: light-dark(rgb(138, 120, 150), rgba(17, 17, 17));
+  background-image: url(public/drawing1.png);
+  background-position: bottom right;
+  /* margin-right: -200px; */
+  background-size: 20%;
+  background-repeat: no-repeat;
+}
 .section2 {
   display: flex;
   flex-direction: column;
@@ -59,8 +69,6 @@ button {
   margin: auto;
   padding: 50px 50px 50px 50px;
   gap: 15px;
-  color: light-dark(rgba(26, 26, 26, 0.87), rgb(198, 198, 198));
-  background-color: light-dark(white, rgba(17, 17, 17));
 }
 @media (min-width: 900px) {
   .section1 {
