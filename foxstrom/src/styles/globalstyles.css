@@ -70,6 +70,16 @@ button {
   padding: 50px 50px 50px 50px;
   gap: 15px;
 }
+.section3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+
+  padding: 50px 50px 50px 50px;
+  gap: 15px;
+}
 @media (min-width: 900px) {
   .section1 {
     display: grid;
