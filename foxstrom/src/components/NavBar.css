@@ -8,10 +8,12 @@
 
   align-items: center;
   margin-right: 50px;
+  z-index: 2;
 }
 .menu {
   display: flex;
   flex-wrap: wrap;
+  z-index: 1;
 }
 .menu a {
   color: var(--color-primary);

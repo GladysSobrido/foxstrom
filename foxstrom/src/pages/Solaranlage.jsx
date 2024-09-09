@@ -1,29 +1,36 @@
+import { useTranslation, Trans } from "react-i18next";
 import "./Solaranlage.css";
 import "./Home.css";
 export function Solaranlage() {
+  const { i18n } = useTranslation();
+  console.log({ i18n });
   return (
     <>
-      <header className="solarHeader">
-        <div className="greybar"></div>
-      </header>
+      <header className="solarHeader"></header>
+      <h1>
+        <Trans i18nKey="solar1">Solaranlage</Trans>
+      </h1>
       <div className="section1">
-        <p className="title1">Solaranlage</p>
-
         <div className="part1">
           <h2>
-            Stromkosten um bis zu 89 % senken: dank SolarAnlage mit Speicher.
+            <Trans i18nKey="solar2">
+              Stromkosten um bis zu 89 % senken: dank SolarAnlage mit Speicher.
+            </Trans>
           </h2>
           <p>
-            Eine SolarAnlage mit Speicher und smarten Energieservices
-            ermöglichen es euch, Ökostrom aus eurer eigenen PV-Anlage auch dann
-            zu nutzen, wenn die Sonne mal nicht scheint. Frühmorgens, abends und
-            nachts versorgt ihr so eure Elektrogeräte, eine strombetriebene
-            Heizung oder die WallBox für euer E-Auto mit selbsterzeugtem
-            Solarstrom. So könnt ihr eure Stromkosten um bis zu 89 % senken.
-            Zudem entlastet ihr nicht nur euren Geldbeutel, sondern auch das
-            Klima: Mithilfe einer Photovoltaikanlage mit Speicher erzeugt, nutzt
-            und speichert ihr euren Strom direkt vor Ort – ein Transport von
-            dezentral erzeugtem Strom über weite Strecken entfällt.{" "}
+            <Trans i18nKey="solar3">
+              Eine SolarAnlage mit Speicher und smarten Energieservices
+              ermöglichen es euch, Ökostrom aus eurer eigenen PV-Anlage auch
+              dann zu nutzen, wenn die Sonne mal nicht scheint. Frühmorgens,
+              abends und nachts versorgt ihr so eure Elektrogeräte, eine
+              strombetriebene Heizung oder die WallBox für euer E-Auto mit
+              selbsterzeugtem Solarstrom. So könnt ihr eure Stromkosten um bis
+              zu 89 % senken. Zudem entlastet ihr nicht nur euren Geldbeutel,
+              sondern auch das Klima: Mithilfe einer Photovoltaikanlage mit
+              Speicher erzeugt, nutzt und speichert ihr euren Strom direkt vor
+              Ort – ein Transport von dezentral erzeugtem Strom über weite
+              Strecken entfällt.{" "}
+            </Trans>
           </p>
         </div>
         <div className="part2">
@@ -48,7 +55,7 @@ export function Solaranlage() {
             Photovoltaikanlage amortisiert, hängt von verschiedenen Faktoren ab.
             Bei einer typischen Anlage mit 8 kWp inklusive Stromspeicher solltet
             ihr zum Beispiel mit rund 16 Jahren rechnen. Ab dann produziert ihr
-            quasi kostenlos Solarstrom.{" "}
+            quasi kostenlos Solarstrom.
           </p>
         </div>
       </div>

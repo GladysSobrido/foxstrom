@@ -9,9 +9,9 @@
   border: solid 3px;
   border-color: var(--color-primary);
   border-radius: 20px;
-  width: 200px;
+  width: 250px;
   padding: 20px;
-  background-color: rgb(250, 225, 225);
+  background-color: rgb(244, 225, 250);
 }
 .small {
   margin: 2px 2px 2px 2px;
