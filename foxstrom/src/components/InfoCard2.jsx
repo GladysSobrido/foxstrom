@@ -15,8 +15,8 @@ export function InfoCard2({
   return (
     <div>
       <svg
-        width="400"
-        height="400"
+        width="250"
+        height="250"
         viewBox="50 -20 310 450"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
