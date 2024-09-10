@@ -28,6 +28,8 @@
     justify-content: end;
     align-items: end;
     height: 110%;
+    max-width: 300%;
+    max-height: 300%;
     margin-top: -30px;
     margin-bottom: 110px;
   }

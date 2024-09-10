@@ -3,7 +3,8 @@ import { Outlet } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { Footer } from "./components/Footer";
 import "./styles/globalstyles.css";
-
+//Chakra components:
+import { ChakraProvider } from "@chakra-ui/react";
 //Authentication with Clerk imports:
 import { ClerkProvider } from "@clerk/clerk-react";
 //Imports for the private routing for clerck authenticated users:
@@ -27,9 +28,11 @@ export function RootLayout() {
         publishableKey={PUBLISHABLE_KEY}
         afterSignOutUrl="/"
       >
-        <NavBar />
-        <Outlet />
-        <Footer />
+        <ChakraProvider>
+          <NavBar />
+          <Outlet />
+          <Footer />
+        </ChakraProvider>
       </ClerkProvider>
     </>
   );
