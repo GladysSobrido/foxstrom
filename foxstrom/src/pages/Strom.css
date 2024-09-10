@@ -1,12 +1,11 @@
-.solarHeader {
-  background-image: url(/Barns-with-Solar-Panels.jpg);
+/* public/stock/pexels-markku-soini-346079267-27670724.jpg */
+.stromHeader {
+  background-image: url(/stock/pexels-markku-soini-346079267-27670724.jpg);
   min-height: 400px;
-
   color: rgb(0, 0, 0);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
   margin: 0px;
   margin-bottom: 60px;
   padding: 0px;

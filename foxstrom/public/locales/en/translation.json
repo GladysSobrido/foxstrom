@@ -3,7 +3,9 @@
   "edit": "Edit<1>src/App.jsx</1> and save to reload",
   "description": "Click over the logos of Vite and React, to learn more",
 
-  "strom1": "The green energy tarifs of FoxStrom",
+  "strom1": "100% genuine green electricity from newly built plants!",
+  "strom2": "Not all renewable energies are the same! Your switch to Fair Trade Power will help change the energy mix for the whole of Germany!",
+  "strom3": "FoxStrom sold electricity from the Austrian hydropower plant Altenwörth in 2020. The power plant is operated by Verbund AG and was commissioned in 1975. Since 2021, FoxStrom has included wind power in its electricity mix and has been receiving direct supplies from the state-of-the-art Midtfjellet wind farm, which was only built in the last 10 years.",
 
   "menu1": "ELECTRICITY",
   "menu2": "SOLAR PANELS",
@@ -16,5 +18,29 @@
 
   "hero_title": "Be smart like a fox!",
   "hero_paragraph": "Change to renewbable energy and get independent from the market with our combo of solar panels + battery + charging station for your car.",
-  "copyrigth": "Copyrigth GladysSobrido 2024"
+  "copyrigth": "Copyrigth GladysSobrido 2024",
+
+  "solar1": "Solar panels",
+  "solar2": "Reduce electricity costs by up to 89 %: thanks to solar system with storage.",
+  "solar3": "A solar system with storage and smart energy services allows you to use green electricity from your own PV system even when the sun isn't shining. Early in the morning, in the evening and at night, you can supply your electrical appliances, an electric heater or the WallBox for your electric car with self-generated solar power. This can reduce your electricity costs by up to 89%. What's more, you not only save money, but also protect the climate: with the help of a photovoltaic system with storage, you can generate, use and store your electricity directly on site - there is no need to transport decentrally generated electricity over long distances.",
+
+  "lade1": "Charging stations for electric cars",
+  "lade2": "Household electricity consumption can skyrocket. To prevent the same thing happening to costs, the ÖkoStrom E-Auto tariff is ideal for anyone who wants to charge their electric car at home. You also charge in a climate-neutral way with 100% green electricity.",
+  "lade3": "Really, electric car and rental apartment? That fits too! The tariff is not just for owner-occupied homes. And if you do want to charge on the go: with E-Auto Unterwegs, you can not only quickly find the nearest public charging station, you can also charge at the lowest fixed price. Or at over 440,000 public charging points across Europe.",
+
+  "card1_title": "Green electricity",
+  "card1text": "Green electricity for your home",
+
+  "card2_title": "Solar system",
+  "card2text": "Solar system for your roof!",
+
+  "card3title": "Charging station",
+  "card3text": "Your charging station at home",
+
+  "card4title": "Combo green",
+  "card4text": "Become independent of the market with our combo: system + storage + charging station",
+  "kombo1": "More independent of the electricity market: with the FoxStrom Kombo and 100% green electricity.",
+  "kombo2": "Produce and use your own electricity whenever you want. With the Kombo from FoxStrom: solar system, storage and wallbox. Everything from a single source.",
+  "kombo3": "The complete solar package for maximum savings",
+  "kombo4": "A solar system with storage and smart energy services allow you to use green electricity from your own PV system even when the sun isn't shining. Early in the morning, in the evening and at night, you can supply your electrical appliances, an electric heater or the WallBox for your electric car with self-generated solar power. This can reduce your electricity costs by up to 89%. What's more, you not only save money, but also protect the climate: with the help of a photovoltaic system with storage, you can generate, use and store your electricity directly on site - there's no need to transport decentrally generated electricity over long distances."
 }

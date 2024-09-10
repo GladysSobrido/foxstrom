@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import { NavBar } from "./components/NavBar";
-
+import { Footer } from "./components/Footer";
 import "./styles/globalstyles.css";
 
 //Authentication with Clerk imports:
@@ -17,11 +17,10 @@ if (!PUBLISHABLE_KEY) {
 }
 
 export function RootLayout() {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const navigate = useNavigate();
   return (
     <>
-      {" "}
       <ClerkProvider
         routerPush={(to) => navigate(to)}
         routerReplace={(to) => navigate(to, { replace: true })}
@@ -30,9 +29,7 @@ export function RootLayout() {
       >
         <NavBar />
         <Outlet />
-        <footer>
-          <p>{t("copyright")}</p>
-        </footer>
+        <Footer />
       </ClerkProvider>
     </>
   );

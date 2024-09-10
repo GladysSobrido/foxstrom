@@ -13,7 +13,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   /* max-width: 1280px; */
   margin: 0;
   padding: 0rem;
@@ -39,7 +38,7 @@ button {
   gap: 0px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 .homecard {
   display: block;
@@ -55,11 +54,9 @@ button {
 .bg {
   color: light-dark(rgb(0, 0, 0), rgb(198, 198, 198));
   background-color: light-dark(rgb(138, 120, 150), rgba(17, 17, 17));
-  background-image: url(public/drawing1.png);
-  background-position: bottom right;
-  /* margin-right: -200px; */
-  background-size: 20%;
+  background-image: url(/drawing1.png);
   background-repeat: no-repeat;
+  min-height: 550px;
 }
 .section2 {
   display: flex;
@@ -70,28 +67,40 @@ button {
   padding: 50px 50px 50px 50px;
   gap: 15px;
 }
+.section3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+
+  padding: 50px 50px 50px 50px;
+  gap: 15px;
+}
 @media (min-width: 900px) {
   .section1 {
     display: grid;
     grid-template-columns: 50% 50%;
-    justify-items: end;
+    /* justify-items: end; */
   }
   .part1 {
     grid-column-start: 1;
     display: flex;
     flex-direction: column;
-    max-width: 400px;
     margin: 60px;
-    /* margin-bottom: auto; */
   }
   .part1 img {
     max-height: 400px;
   }
   .part2 {
     grid-column-start: 2;
-    align-items: end;
-    max-width: 400px;
+    align-items: start;
+    justify-content: center;
     margin: 60px;
+  }
+  .bg {
+    background-size: 20%;
+    background-position: bottom right;
   }
 }
 @media (max-width: 900px) {
@@ -99,6 +108,7 @@ button {
     display: flex;
     flex-direction: column;
   }
+
   .part1 {
     max-width: 80%;
     align-self: center;
@@ -108,5 +118,10 @@ button {
     max-width: 80%;
     align-self: center;
     margin-bottom: 20px;
+  }
+  .bg {
+    background-size: 18%;
+    background-position: bottom;
+    padding-bottom: 30%;
   }
 }

@@ -1,10 +1,12 @@
 require("dotenv").config();
+const cors = require("cors");
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
 const connect = require("./lib/connect");
 const Plz = require("./models/plz");
 const Verbrauch = require("./models/verbrauch");
+app.use(cors());
 
 app.get("/", (req, res) => res.type("html").send(html));
 
@@ -16,6 +18,16 @@ app.get("/verbrauch", async (req, res) => {
   }
   return res.json(verbrauch);
 });
+app.get("/verbrauch/:group", async (req, res) => {
+  await connect();
+  const { group } = req.params;
+  const verbrauch = await Verbrauch.findOne({ group: Number(group) });
+  if (verbrauch) {
+    res.json(verbrauch);
+  } else {
+    res.status(404).json({ message: "Consumption not found" });
+  }
+});
 
 app.get("/plz", async (req, res) => {
   await connect();
@@ -25,11 +37,23 @@ app.get("/plz", async (req, res) => {
   }
   return res.json(plz);
 });
+app.get("/plz/:range", async (req, res) => {
+  await connect();
+  const { range } = req.params;
+  console.log("range: ", range);
+  const plz = await Plz.findOne({ range: Number(range) });
+  if (plz) {
+    res.json(plz);
+  } else {
+    res.status(404).json({ message: "Postalcode not found" });
+  }
+});
 
 const server = app.listen(port, () =>
   console.log(`Express app listening on port ${port}!`)
 );
 
+app.get;
 server.keepAliveTimeout = 120 * 1000;
 server.headersTimeout = 120 * 1000;
 

@@ -49,8 +49,8 @@ const infocards = [
     clipPath: "url(#cp2)",
   },
   {
-    title: "Combo Grün",
-    text: "Wird unabhängig von dem Markt mit unsere Combo: Anlage + Speicher + Ladestation",
+    title: "Kombo Grün",
+    text: "Wird unabhängig von dem Markt mit unsere Kombo: Anlage + Speicher + Ladestation",
     imgHref: "/stock/389_focus_img.JPG",
     imgWidth: "780",
     imgHeight: "100%",
