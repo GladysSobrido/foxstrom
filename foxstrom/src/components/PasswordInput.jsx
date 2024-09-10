@@ -2,6 +2,7 @@ import {
   Input,
   InputGroup,
   InputRightElement,
+
   //   InputRightAddon,
   //Button,
   //FormLabel,
@@ -17,7 +18,7 @@ export function PasswordInput() {
         <Input
           id="pass"
           type={show ? "text" : "password"}
-          placeholder="Enter password"
+          placeholder="Passwort"
         />
         <InputRightElement
           width="2rem"
