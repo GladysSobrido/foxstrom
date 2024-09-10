@@ -28,54 +28,55 @@ export function Register() {
     if (step == 0) {
       return (
         <>
-          <header className="regHeader"></header>
-          <h1>Registrieren Sie</h1>
+          <div className="regHeader">
+            <h1>Registrieren Sie</h1>
 
-          <div className="formChakraContainer">
-            {/* Name, surname */}
-            <Flex className="formcontainer">
-              <FormControl mr="5%">
-                <FormLabel htmlFor="vorname" fontWeight={"normal"}>
-                  First name
-                </FormLabel>
-                <Input
-                  id="vorname"
-                  placeholder="Vorname"
-                  className="inputfield"
-                />
-              </FormControl>
+            <div className="formChakraContainer">
+              {/* Name, surname */}
+              <Flex className="formcontainer">
+                <FormControl mr="5%">
+                  <FormLabel htmlFor="vorname" fontWeight={"normal"}>
+                    First name
+                  </FormLabel>
+                  <Input
+                    id="vorname"
+                    placeholder="Vorname"
+                    className="inputfield"
+                  />
+                </FormControl>
 
-              <FormControl mr="5%">
-                <FormLabel htmlFor="nachname" fontWeight={"normal"}>
-                  Last name
-                </FormLabel>
-                <Input id="nachname" placeholder="Nachname" />
-              </FormControl>
-            </Flex>
-            {/*username, password */}
-            <Flex className="formcontainer">
-              <FormControl mr="5%">
-                <FormLabel htmlFor="email" fontWeight={"normal"}>
-                  E-Mail
-                </FormLabel>
-                <Input id="email" placeholder="mail@provider.com" />
-              </FormControl>
+                <FormControl mr="5%">
+                  <FormLabel htmlFor="nachname" fontWeight={"normal"}>
+                    Last name
+                  </FormLabel>
+                  <Input id="nachname" placeholder="Nachname" />
+                </FormControl>
+              </Flex>
+              {/*username, password */}
+              <Flex className="formcontainer">
+                <FormControl mr="5%">
+                  <FormLabel htmlFor="email" fontWeight={"normal"}>
+                    E-Mail
+                  </FormLabel>
+                  <Input id="email" placeholder="mail@provider.com" />
+                </FormControl>
 
-              <FormControl mr="5%">
-                <FormLabel htmlFor="pass" fontWeight={"normal"}>
-                  Passwort
-                </FormLabel>
-                <PasswordInput />
-              </FormControl>
-            </Flex>
-            <Button
-              className="chakraButton"
-              type="submit"
-              name="submit"
-              onClick={() => setStep(1)}
-            >
-              Submit
-            </Button>
+                <FormControl mr="5%">
+                  <FormLabel htmlFor="pass" fontWeight={"normal"}>
+                    Passwort
+                  </FormLabel>
+                  <PasswordInput />
+                </FormControl>
+              </Flex>
+              <Button
+                className="chakraButton"
+                type="submit"
+                name="submit"
+                onClick={() => setStep(1)}
+              >
+                Submit
+              </Button>
+            </div>
           </div>
         </>
       );
@@ -83,19 +84,27 @@ export function Register() {
     if (step == 1) {
       return (
         <>
-          <header className="regHeader"></header>
-          <div className="formChakraContainer">
-            <p>Introduce the code</p>
-            {/* Note:we can choose type="alphanumeric" */}
-            <PinInput type="number">
-              <PinInputField />
-              <PinInputField />
-              <PinInputField />
-              <PinInputField />
-            </PinInput>
-            <Button type="submit" name="submit" onClick={() => setStep(2)}>
-              Submit
-            </Button>
+          <div className="regHeader">
+            <h2>Introduce the code</h2>
+            <div className="formChakraContainer">
+              {/* Note:we can choose type="alphanumeric" */}
+              <div className="pin">
+                <PinInput type="number">
+                  <PinInputField />
+                  <PinInputField />
+                  <PinInputField />
+                  <PinInputField />
+                </PinInput>
+              </div>
+              <Button
+                className="chakraButton"
+                type="submit"
+                name="submit"
+                onClick={() => setStep(2)}
+              >
+                Submit
+              </Button>
+            </div>
           </div>
         </>
       );
@@ -103,13 +112,14 @@ export function Register() {
     if (step == 2) {
       return (
         <>
-          <header className="regHeader"></header>
-          <div className="formChakraContainer">
-            <h2>Thank you for confirming your email</h2>
-            <p>
-              Now you can fill in your information in order to become a
-              customer.
-            </p>
+          <div className="regHeader">
+            <div className="formChakraContainer">
+              <h2>Thank you for confirming your email</h2>
+              <p>
+                Now you can fill in your information in order to become a
+                customer.
+              </p>
+            </div>
           </div>
         </>
       );
