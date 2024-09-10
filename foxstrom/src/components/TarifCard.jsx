@@ -6,6 +6,10 @@ export function TarifCard({ tarif }) {
 
   console.log("tarif: ", { tarif });
 
+  function register() {
+    event.preventDefault();
+  }
+
   return (
     <div className="card">
       {/* <p className="small">Dein Tarif:</p> */}
@@ -20,7 +24,16 @@ export function TarifCard({ tarif }) {
         <p>Base Price:{element.nettPrice} €</p>
         <p>Taxes (20%): {element.tax} €</p>
       </div>
-      <div>10% online vorteil</div>
+      <form
+        action="/register"
+        onSubmit={(event) => {
+          register(event);
+        }}
+      >
+        <button className="registerButton" type="submit">
+          Den will ich
+        </button>
+      </form>
     </div>
   );
 }

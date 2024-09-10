@@ -1,6 +1,8 @@
 import { useTranslation, Trans } from "react-i18next";
 import "./Solaranlage.css";
+
 import "./Home.css";
+// import { Shape3 } from "../components/Shape3";
 export function Solaranlage() {
   const { i18n } = useTranslation();
   console.log({ i18n });
@@ -12,9 +14,19 @@ export function Solaranlage() {
       </h1>
       <div className="section1">
         <div className="part1">
+          {/* <Shape3
+            shapeWidth={"600"}
+            shapeHeigth={"300"}
+            viewBox={"100 10 290 230"}
+            imgHref={"public/stock/solar-panels-6940440_640.jpg"}
+            imgHeight={"500px"}
+            imgWidth={"500px"}
+            imgX={0}
+            imgY={-190}
+          /> */}
           <h2>
             <Trans i18nKey="solar2">
-              Stromkosten um bis zu 89 % senken: dank SolarAnlage mit Speicher.
+              Stromkosten um bis zu 89% senken: dank SolarAnlage mit Speicher.
             </Trans>
           </h2>
           <p>
@@ -29,12 +41,12 @@ export function Solaranlage() {
               sondern auch das Klima: Mithilfe einer Photovoltaikanlage mit
               Speicher erzeugt, nutzt und speichert ihr euren Strom direkt vor
               Ort – ein Transport von dezentral erzeugtem Strom über weite
-              Strecken entfällt.{" "}
+              Strecken entfällt.
             </Trans>
           </p>
         </div>
         <div className="part2">
-          <img src="public/stock/solar-panels-6940440_640.jpg"></img>
+          <img src="stock/solar-panels-6940440_640.jpg"></img>
         </div>
       </div>
       <div className="section1">
