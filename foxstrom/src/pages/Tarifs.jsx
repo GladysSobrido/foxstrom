@@ -101,6 +101,7 @@ export function Tarifs() {
   console.log(foxPreis);
   foxTarif = [
     {
+      id: "FoxTarif",
       tarifName: "FoxTarif",
       totalPrice: foxPreis,
       nettPrice: foxNettPreis,
@@ -113,6 +114,7 @@ export function Tarifs() {
   studentPreis = studentNettPreis + studentTax;
   studentTarif = [
     {
+      id: "FoxStudent",
       tarifName: "FoxStudent",
       totalPrice: studentPreis,
       nettPrice: studentNettPreis,
@@ -125,6 +127,7 @@ export function Tarifs() {
   autoPreis = autoNettPreis + autoTax;
   autoTarif = [
     {
+      id: "FoxAuto",
       tarifName: "FoxAuto",
       totalPrice: autoPreis,
       nettPrice: autoNettPreis,
