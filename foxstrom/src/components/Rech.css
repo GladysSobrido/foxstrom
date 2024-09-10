@@ -1,0 +1,48 @@
+.rechnercontainer {
+  border: solid 0px black;
+  border-radius: 50px;
+  padding: 25px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 15px 10px rgba(0, 0, 0, 0.231);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.rechnercontainer h2 {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-bottom: 50px;
+}
+.rechnerinhalt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.rechnerinputs {
+  /* display: flex; */
+  justify-content: space-evenly;
+}
+.buttonRechner {
+  width: 150px;
+  margin: 15px, auto;
+}
+@media (min-width: 900px) {
+  .rechnercontainer {
+    min-width: 450px;
+  }
+}
+@media (max-width: 900px) {
+  .rechnercontainer {
+    min-width: 250px;
+    padding: 15px 5px;
+    max-width: min-content;
+  }
+  .rechnerinputs {
+    display: flex;
+    flex-direction: column;
+    max-width: content;
+    justify-content: center;
+    margin: auto;
+  }
+}

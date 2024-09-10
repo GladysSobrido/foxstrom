@@ -1,0 +1,15 @@
+.formChakraContainer {
+  max-width: 800px;
+  margin: auto;
+  gap: 10px;
+  padding: 100px;
+}
+
+.formChakra {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.chakraButton {
+  margin: 50px;
+}

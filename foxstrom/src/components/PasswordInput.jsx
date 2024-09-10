@@ -2,8 +2,9 @@ import {
   Input,
   InputGroup,
   InputRightElement,
-  Button,
-  FormLabel,
+  //   InputRightAddon,
+  //Button,
+  //FormLabel,
 } from "@chakra-ui/react";
 import React from "react";
 export function PasswordInput() {
@@ -11,18 +12,23 @@ export function PasswordInput() {
   const handleClick = () => setShow(!show);
 
   return (
-    <InputGroup size="md">
-      <FormLabel>Password:</FormLabel>
-      <Input
-        pr="4.5rem"
-        type={show ? "text" : "password"}
-        placeholder="Enter password"
-      />
-      <InputRightElement width="4.5rem">
-        <Button h="1.75rem" size="sm" onClick={handleClick}>
-          {show ? "Hide" : "Show"}
-        </Button>
-      </InputRightElement>
-    </InputGroup>
+    <>
+      <InputGroup>
+        <Input
+          id="pass"
+          type={show ? "text" : "password"}
+          placeholder="Enter password"
+        />
+        <InputRightElement
+          width="2rem"
+          //   variant="outline"
+          h="3rem"
+          size="xs"
+          onClick={handleClick}
+        >
+          {show ? "❌" : "👁️"}
+        </InputRightElement>
+      </InputGroup>
+    </>
   );
 }

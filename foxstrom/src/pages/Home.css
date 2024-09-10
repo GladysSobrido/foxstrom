@@ -2,8 +2,12 @@
   background-color: var(--color-primary);
 }
 .herotext {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
   max-height: fit-content;
+  min-height: 200px;
   font-weight: 500;
   border: 1px solid white;
   color: white;
@@ -17,7 +21,7 @@
   }
   .herotext {
     grid-column-start: 2;
-    align-items: end;
+    align-items: start;
     max-width: 400px;
     margin-top: 100px;
     margin-bottom: auto;
@@ -28,7 +32,7 @@
     justify-content: end;
     align-items: end;
     height: 110%;
-    max-width: 300%;
+    max-width: 500%;
     max-height: 300%;
     margin-top: -30px;
     margin-bottom: 110px;
@@ -52,5 +56,11 @@
   .foxhunting {
     max-width: 40%;
     align-self: center;
+    margin: 20px 0px;
+  }
+  .rechner {
+    display: flex;
+    justify-content: center;
+    margin: auto;
   }
 }

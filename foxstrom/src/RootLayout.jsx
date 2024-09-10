@@ -4,7 +4,38 @@ import { NavBar } from "./components/NavBar";
 import { Footer } from "./components/Footer";
 import "./styles/globalstyles.css";
 //Chakra components:
-import { ChakraProvider } from "@chakra-ui/react";
+import {
+  ChakraBaseProvider,
+  extendBaseTheme,
+  theme as chakraTheme,
+  InputRightAddon,
+} from "@chakra-ui/react";
+
+const {
+  Button,
+  Input,
+  InputGroup,
+  InputRightElement,
+  FormLabel,
+  FormHelperText,
+  PinInput,
+  PinInputField,
+} = chakraTheme.components;
+
+const theme = extendBaseTheme({
+  components: {
+    Button,
+    Input,
+    InputGroup,
+    InputRightElement,
+    InputRightAddon,
+    FormLabel,
+    FormHelperText,
+    PinInput,
+    PinInputField,
+  },
+});
+
 //Authentication with Clerk imports:
 import { ClerkProvider } from "@clerk/clerk-react";
 //Imports for the private routing for clerck authenticated users:
@@ -28,11 +59,11 @@ export function RootLayout() {
         publishableKey={PUBLISHABLE_KEY}
         afterSignOutUrl="/"
       >
-        <ChakraProvider>
+        <ChakraBaseProvider theme={theme} resetCSS={false}>
           <NavBar />
           <Outlet />
           <Footer />
-        </ChakraProvider>
+        </ChakraBaseProvider>
       </ClerkProvider>
     </>
   );
