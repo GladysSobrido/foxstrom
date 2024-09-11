@@ -1,6 +1,8 @@
 import "./TarifCard.css";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 export function TarifCard({ tarif }) {
+  const { t } = useTranslation();
   // const tarifName = "FoxTarif";
   const [element] = tarif;
   // const totalPrice = 170.4;
@@ -13,17 +15,23 @@ export function TarifCard({ tarif }) {
       <p className="big">{element.tarifName}</p>
       <div className="price">
         <p className="giant">{element.totalPrice} </p>
-        <p className="medium">€/Month</p>
+        <p className="medium">{t("tcard1")}</p>
       </div>
       <div className="small">
-        <p>🌱 100% Ökostrom</p>
-        <p>Including:</p>
-        <p>Base Price:{element.nettPrice} €</p>
-        <p>Taxes (20%): {element.tax} €</p>
+        <p>{t("tcard2")}</p>
+        <p>{t("tcard3")}</p>
+        <p>
+          {t("tcard4")}
+          {element.nettPrice} €
+        </p>
+        <p>
+          {t("tcard5")}
+          {element.tax} {t("tcard5_2")}
+        </p>
       </div>
       <Link to={`/register?tarif=${element.id}`}>
         <button className="registerButton" type="submit">
-          Den will ich
+          {t("tcard6")}
         </button>
       </Link>
     </div>

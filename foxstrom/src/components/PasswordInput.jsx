@@ -19,7 +19,7 @@ export function PasswordInput() {
           size="sm"
           id="pass"
           type={show ? "text" : "password"}
-          placeholder="Passwort"
+          placeholder="****"
         />
         <InputRightElement
           width="2rem"

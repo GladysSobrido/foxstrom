@@ -54,20 +54,26 @@ export function Solaranlage() {
           <img src="public/stock/389_focus_img.JPG"></img>
         </div>
         <div className="part2">
-          <h2>Wie viel kostet eine SolarAnlage mit Speicher?</h2>
+          <h2>
+            <Trans i18nKey="solar4">
+              Wie viel kostet eine SolarAnlage mit Speicher?
+            </Trans>
+          </h2>
           <p>
-            Wie viel ihr für eure Photovoltaikanlage mit Speicher bezahlt, kommt
-            unter anderem auf die Größe der Anlage an. Diese hängt wiederum von
-            eurer nutzbaren Dachfläche und eurem Strombedarf ab. Die meisten
-            Einfamilienhäuser haben im Durchschnitt eine nutzbare Dachfläche von
-            bis zu 60 m². Auf dieser Fläche wird in der Regel eine
-            Photovoltaikanlage errichtet, die etwa zwischen 4 und 10 kWp
-            produziert. Die Kosten für solch eine SolarAnlage mit Stromspeicher
-            liegen bei ca. 11.500 bis 30.300 €. Wann sich eure
-            Photovoltaikanlage amortisiert, hängt von verschiedenen Faktoren ab.
-            Bei einer typischen Anlage mit 8 kWp inklusive Stromspeicher solltet
-            ihr zum Beispiel mit rund 16 Jahren rechnen. Ab dann produziert ihr
-            quasi kostenlos Solarstrom.
+            <Trans i18nKey="solar5">
+              Wie viel ihr für eure Photovoltaikanlage mit Speicher bezahlt,
+              kommt unter anderem auf die Größe der Anlage an. Diese hängt
+              wiederum von eurer nutzbaren Dachfläche und eurem Strombedarf ab.
+              Die meisten Einfamilienhäuser haben im Durchschnitt eine nutzbare
+              Dachfläche von bis zu 60 m². Auf dieser Fläche wird in der Regel
+              eine Photovoltaikanlage errichtet, die etwa zwischen 4 und 10 kWp
+              produziert. Die Kosten für solch eine SolarAnlage mit
+              Stromspeicher liegen bei ca. 11.500 bis 30.300 €. Wann sich eure
+              Photovoltaikanlage amortisiert, hängt von verschiedenen Faktoren
+              ab. Bei einer typischen Anlage mit 8 kWp inklusive Stromspeicher
+              solltet ihr zum Beispiel mit rund 16 Jahren rechnen. Ab dann
+              produziert ihr quasi kostenlos Solarstrom.
+            </Trans>
           </p>
         </div>
       </div>

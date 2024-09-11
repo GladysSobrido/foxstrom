@@ -89,7 +89,7 @@ export function Rech() {
         <div className="rechnerinhalt">
           <Flex className="rechnerinputs">
             <FormControl mr="5%" action="/tarifs">
-              <FormLabel htmlFor="postleitzahl">Postleitzahl</FormLabel>
+              <FormLabel htmlFor="postleitzahl">{t("rech2")}</FormLabel>
               <Input
                 size="xs"
                 id="postleitzahl"
@@ -102,7 +102,7 @@ export function Rech() {
               />
             </FormControl>
             <FormControl mr="5%" action="/tarifs">
-              <FormLabel htmlFor="personen">Personen im Haushalt </FormLabel>
+              <FormLabel htmlFor="personen">{t("rech3")}</FormLabel>
               <Input
                 size="xs"
                 id="personen"
@@ -112,9 +112,7 @@ export function Rech() {
                 }}
               ></Input>
 
-              <FormLabel htmlFor="jahresverbrauch">
-                Jahresverbrauch (kWh)
-              </FormLabel>
+              <FormLabel htmlFor="jahresverbrauch">{t("rech4")}</FormLabel>
               <Input
                 size="xs"
                 id="jahresverbrauch"
@@ -132,7 +130,7 @@ export function Rech() {
               submitData(event);
             }}
           >
-            Preis berechnen
+            {t("rech5")}
           </Button>
         </div>
         {message}

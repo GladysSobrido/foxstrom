@@ -23,15 +23,17 @@
   "solar1": "Solar panels",
   "solar2": "Reduce electricity costs by up to 89 %: thanks to solar system with storage.",
   "solar3": "A solar system with storage and smart energy services allows you to use green electricity from your own PV system even when the sun isn't shining. Early in the morning, in the evening and at night, you can supply your electrical appliances, an electric heater or the WallBox for your electric car with self-generated solar power. This can reduce your electricity costs by up to 89%. What's more, you not only save money, but also protect the climate: with the help of a photovoltaic system with storage, you can generate, use and store your electricity directly on site - there is no need to transport decentrally generated electricity over long distances.",
+  "solar4": "How much does a solar system with storage cost?",
+  "solar5": "How much you pay for your photovoltaic system with storage depends, among other things, on the size of the system. This in turn depends on your usable roof area and your electricity requirements. On average, most single-family homes have a usable roof area of up to 60 m². A photovoltaic system that produces between 4 and 10 kWp is usually installed on this area. The cost of such a solar system with an electricity storage unit is around €11,500 to €30,300. When your photovoltaic system will pay for itself depends on various factors. For a typical system with 8 kWp including electricity storage, for example, you should expect around 16 years. From then on, you will be producing solar power virtually free of charge.",
 
   "lade1": "Charging stations for electric cars",
   "lade2": "Household electricity consumption can skyrocket. To prevent the same thing happening to costs, the ÖkoStrom E-Auto tariff is ideal for anyone who wants to charge their electric car at home. You also charge in a climate-neutral way with 100% green electricity.",
   "lade3": "Really, electric car and rental apartment? That fits too! The tariff is not just for owner-occupied homes. And if you do want to charge on the go: with E-Auto Unterwegs, you can not only quickly find the nearest public charging station, you can also charge at the lowest fixed price. Or at over 440,000 public charging points across Europe.",
 
-  "card1_title": "Green electricity",
+  "card1title": "Green electricity",
   "card1text": "Green electricity for your home",
 
-  "card2_title": "Solar system",
+  "card2title": "Solar system",
   "card2text": "Solar system for your roof!",
 
   "card3title": "Charging station",
@@ -42,5 +44,46 @@
   "kombo1": "More independent of the electricity market: with the FoxStrom Kombo and 100% green electricity.",
   "kombo2": "Produce and use your own electricity whenever you want. With the Kombo from FoxStrom: solar system, storage and wallbox. Everything from a single source.",
   "kombo3": "The complete solar package for maximum savings",
-  "kombo4": "A solar system with storage and smart energy services allow you to use green electricity from your own PV system even when the sun isn't shining. Early in the morning, in the evening and at night, you can supply your electrical appliances, an electric heater or the WallBox for your electric car with self-generated solar power. This can reduce your electricity costs by up to 89%. What's more, you not only save money, but also protect the climate: with the help of a photovoltaic system with storage, you can generate, use and store your electricity directly on site - there's no need to transport decentrally generated electricity over long distances."
+  "kombo4": "A solar system with storage and smart energy services allow you to use green electricity from your own PV system even when the sun isn't shining. Early in the morning, in the evening and at night, you can supply your electrical appliances, an electric heater or the WallBox for your electric car with self-generated solar power. This can reduce your electricity costs by up to 89%. What's more, you not only save money, but also protect the climate: with the help of a photovoltaic system with storage, you can generate, use and store your electricity directly on site - there's no need to transport decentrally generated electricity over long distances.",
+
+  "rech1": "Calculate pure green energy",
+  "rech2": "Postal code",
+  "rech3": "People in the household",
+  "rech4": "Yearly consumption (kWh)",
+  "rech5": "Calculate prize",
+
+  "tcard1": "€/Month",
+  "tcard2": "🌱 100% Green energy",
+  "tcard3": "Including:",
+  "tcard4": "Base price: ",
+  "tcard5": "Taxes (20%): ",
+  "tcard5_2": "€",
+  "tcard6": "I want this:",
+
+  "kontakt1": "Contact us",
+  "kontakt2": "Write us a message and we will contact you back as soon as possible.",
+
+  "register1": "Sign up form",
+  "register2": "First name",
+  "register3": "Last Name",
+  "register4": "Street",
+  "register5": "Haus number",
+  "register6": "Postal code",
+  "register7": "City",
+  "register8": "Email<",
+  "register9": "Email wil be verified",
+  "register10": "Password",
+  "register11": "Submit",
+
+  "register12": "Introduce the code",
+  "register13": "Thank you for registering",
+  "register14": "Now you can access your customer profile.",
+
+  "footer1": "About us",
+  "footer2": "Energy transition",
+  "footer3": "Jobs",
+  "footer4": "Impressum",
+  "footer5": "Data protection",
+  "footer6": "Terms & conditions",
+  "footer7": "Copyrigth: Gladys Sobrido 2024"
 }
