@@ -31,7 +31,10 @@
   gap: 30px;
   padding: 20px;
 }
-
+.helpertext {
+  color: gray;
+  font-size: 12px;
+}
 .formChakra {
   display: flex;
   flex-direction: row;
@@ -45,6 +48,9 @@
   flex-direction: row;
   justify-content: center;
   padding-top: 50px;
+}
+.strasse {
+  width: 100%;
 }
 @media (min-width: 900px) {
   .formChakraContainer {

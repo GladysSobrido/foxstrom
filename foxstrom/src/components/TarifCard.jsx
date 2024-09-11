@@ -16,7 +16,7 @@ export function TarifCard({ tarif }) {
         <p className="medium">€/Month</p>
       </div>
       <div className="small">
-        <p>✅ 100% Ökostrom</p>
+        <p>🌱 100% Ökostrom</p>
         <p>Including:</p>
         <p>Base Price:{element.nettPrice} €</p>
         <p>Taxes (20%): {element.tax} €</p>
