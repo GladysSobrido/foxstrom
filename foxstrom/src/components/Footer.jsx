@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <>
       <div className="foot">
-        <img className="footerLogo" src="logo_with_text.png"></img>
+        <img className="footerLogo" src="/logo_with_text.png"></img>
         <div className="foot1">
           <ul className="pack">
             <li>

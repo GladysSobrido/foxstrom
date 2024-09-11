@@ -1,7 +1,9 @@
 import { useSearchParams } from "react-router-dom";
 import { PasswordInput } from "../components/PasswordInput";
 import { useState } from "react";
+import { useSignUp } from "@clerk/clerk-react";
 import { useTranslation, Trans } from "react-i18next";
+import { isClerkAPIResponseError } from "@clerk/clerk-react/errors";
 import "./Register.css";
 //Chakra form control
 import {
@@ -19,14 +21,62 @@ import {
 
 // Step 0= filling the form, step 1= introducing code, step 3= thank you for registering
 export function Register() {
+  const { isLoaded, signUp, setActive } = useSignUp();
   const [step, setStep] = useState(0);
   const [searchParams] = useSearchParams();
   const tarif = searchParams.get("tarif");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [pin, setPin] = useState([null, null, null, null, null, null]);
   console.log("tarif:", tarif);
   //Show/hide password: Component PasswordInput
   //Translation
   const { i18n } = useTranslation();
   console.log({ i18n });
+
+  async function handleSignUp() {
+    try {
+      if (!isLoaded) return;
+      await signUp.create({
+        emailAddress: email,
+        password,
+      });
+      await signUp.prepareEmailAddressVerification({
+        strategy: "email_code",
+      });
+      setStep(1);
+    } catch (err) {
+      if (isClerkAPIResponseError(err)) {
+        console.log(err.errors);
+      }
+      console.error(JSON.stringify(err, null, 2));
+      console.log(err);
+    }
+  }
+
+  //bg4$17fgh
+
+  async function handleVerification() {
+    try {
+      const strPin = pin.join("");
+      const completeSignUp = await signUp.attemptEmailAddressVerification({
+        code: strPin,
+      });
+
+      // If verification was completed, set the session to active
+      // and redirect the user
+      if (completeSignUp.status === "complete") {
+        await setActive({ session: completeSignUp.createdSessionId });
+        setStep(2); //API ANRUF KOMMT HIER
+      } else {
+        // If the status is not complete, check why. User may need to
+        // complete further steps.
+        console.error(JSON.stringify(completeSignUp, null, 2));
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   {
     if (step == 0) {
@@ -106,24 +156,38 @@ export function Register() {
                   <FormLabel htmlFor="email" fontWeight={"normal"}>
                     <Trans i18nKey="register8">E-Mail</Trans>
                   </FormLabel>
-                  <Input size="sm" id="email" placeholder="mail@provider.com" />
+                  <Input
+                    value={email}
+                    onChange={(event) => {
+                      setEmail(event.target.value);
+                    }}
+                    size="sm"
+                    id="email"
+                    placeholder="mail@provider.com"
+                  />
                   <FormHelperText className="helpertext">
                     <Trans i18nKey="register9">E-Mail wird verifiziert</Trans>
                   </FormHelperText>
                 </FormControl>
-
+                {<p>{email}</p>}
+                {<p>{password}</p>}
                 <FormControl mr="5%">
                   <FormLabel htmlFor="pass" fontWeight={"normal"}>
                     <Trans i18nKey="register10">Passwort</Trans>
                   </FormLabel>
-                  <PasswordInput />
+                  <PasswordInput
+                    value={password}
+                    onChange={(event) => {
+                      setPassword(event.target.value);
+                    }}
+                  />
                 </FormControl>
               </Flex>
               <Button
                 className="chakraButton"
                 type="submit"
                 name="submit"
-                onClick={() => setStep(1)}
+                onClick={handleSignUp}
               >
                 <Trans i18nKey="register11">Senden</Trans>
               </Button>
@@ -143,17 +207,28 @@ export function Register() {
               {/* Note:we can choose type="alphanumeric" */}
               <div className="pin">
                 <PinInput type="number">
-                  <PinInputField />
-                  <PinInputField />
-                  <PinInputField />
-                  <PinInputField />
+                  {[0, 0, 0, 0, 0, 0].map((_, index) => {
+                    return (
+                      <PinInputField
+                        key={index}
+                        value={pin[index]}
+                        onChange={(event) => {
+                          setPin((prev) => {
+                            prev[index] = event.target.value;
+                            return prev.slice();
+                          });
+                        }}
+                      />
+                    );
+                  })}
                 </PinInput>
+                <p>{JSON.stringify(pin)}</p>
               </div>
               <Button
                 className="chakraButton"
                 type="submit"
                 name="submit"
-                onClick={() => setStep(2)}
+                onClick={handleVerification}
               >
                 <Trans i18nKey="register11">Senden</Trans>
               </Button>
