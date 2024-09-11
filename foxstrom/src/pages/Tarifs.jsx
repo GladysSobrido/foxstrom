@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { TarifCard } from "../components/TarifCard";
 import { Rech } from "../components/Rech";
+import "./Tarifs.css";
 
 const API = "http://localhost:3000";
 //"https://foxstrom.onrender.com";
@@ -138,15 +139,17 @@ export function Tarifs() {
 
   return (
     <>
-      <div className="section2">
-        {/* <Rechner /> */}
-        <Rech />
-      </div>
-      <div className="bg">
+      <header className="tarifsHeader">
         <div className="section3">
           <TarifCard tarif={foxTarif} />
           <TarifCard tarif={studentTarif} />
           <TarifCard tarif={autoTarif} />
+        </div>
+      </header>
+      <div className="bg">
+        <div className="section2">
+          {/* <Rechner /> */}
+          <Rech />
         </div>
       </div>
     </>

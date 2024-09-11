@@ -16,6 +16,7 @@ export function PasswordInput() {
     <>
       <InputGroup>
         <Input
+          size="sm"
           id="pass"
           type={show ? "text" : "password"}
           placeholder="Passwort"
@@ -23,7 +24,7 @@ export function PasswordInput() {
         <InputRightElement
           width="2rem"
           //   variant="outline"
-          h="3rem"
+          h="2rem"
           size="xs"
           onClick={handleClick}
         >

@@ -1,0 +1,11 @@
+.tarifsHeader {
+  background-image: url(/pexels-caio-45917.jpg);
+  background-position: top;
+
+  color: rgb(0, 0, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding-top: 250px;
+  padding-bottom: 200px;
+}

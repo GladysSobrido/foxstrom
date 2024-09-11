@@ -7,7 +7,7 @@ import {
   FormControl,
   FormLabel,
   // FormErrorMessage,
-  //FormHelperText,
+  FormHelperText,
   Input,
   Button,
   PinInput,
@@ -39,6 +39,7 @@ export function Register() {
                     First name
                   </FormLabel>
                   <Input
+                    size="sm"
                     id="vorname"
                     placeholder="Vorname"
                     className="inputfield"
@@ -49,7 +50,48 @@ export function Register() {
                   <FormLabel htmlFor="nachname" fontWeight={"normal"}>
                     Last name
                   </FormLabel>
-                  <Input id="nachname" placeholder="Nachname" />
+                  <Input size="sm" id="nachname" placeholder="Nachname" />
+                </FormControl>
+              </Flex>
+              {/* addresse */}
+              <Flex className="formcontainer">
+                <FormControl mr="5%">
+                  <FormLabel htmlFor="strasse" fontWeight={"normal"}>
+                    Straße
+                  </FormLabel>
+                  <Input
+                    size="sm"
+                    id="strasse"
+                    placeholder="Main Str. 1"
+                    className="strasse"
+                  />
+                </FormControl>
+                <FormControl mr="5%">
+                  <FormLabel htmlFor="hausnummer" fontWeight={"normal"}>
+                    Hausnummer
+                  </FormLabel>
+                  <Input size="sm" id="hausnummer" placeholder="1" />
+                </FormControl>
+              </Flex>
+              <Flex className="formcontainer">
+                {" "}
+                <FormControl mr="5%">
+                  <FormLabel htmlFor="plz" fontWeight={"normal"}>
+                    Postleitzahl
+                  </FormLabel>
+                  <Input
+                    size="sm"
+                    id="plz"
+                    placeholder="10234"
+                    className="inputfield"
+                    type="number"
+                  />
+                </FormControl>
+                <FormControl mr="5%">
+                  <FormLabel htmlFor="ort" fontWeight={"normal"}>
+                    Stadt
+                  </FormLabel>
+                  <Input size="sm" id="ort" placeholder="Bonn" />
                 </FormControl>
               </Flex>
               {/*username, password */}
@@ -58,7 +100,10 @@ export function Register() {
                   <FormLabel htmlFor="email" fontWeight={"normal"}>
                     E-Mail
                   </FormLabel>
-                  <Input id="email" placeholder="mail@provider.com" />
+                  <Input size="sm" id="email" placeholder="mail@provider.com" />
+                  <FormHelperText className="helpertext">
+                    E-Mail wird verifiziert
+                  </FormHelperText>
                 </FormControl>
 
                 <FormControl mr="5%">
