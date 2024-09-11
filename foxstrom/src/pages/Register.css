@@ -1,0 +1,67 @@
+.regHeader {
+  background-image: url(/pexels-pixabay-434337.jpg);
+  background-position: top;
+
+  color: rgb(0, 0, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding-top: 350px;
+  padding-bottom: 60px;
+}
+
+.formChakraContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 15px 10px rgba(0, 0, 0, 0.231);
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  gap: 10px;
+  min-height: 200px;
+}
+.formcontainer {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  gap: 30px;
+  padding: 20px;
+}
+
+.formChakra {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.chakraButton {
+  margin: auto;
+}
+.pin {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 50px;
+}
+@media (min-width: 900px) {
+  .formChakraContainer {
+    padding: 10px;
+  }
+}
+@media (max-width: 900px) {
+  .formChakraContainer {
+    padding: 20px;
+    gap: 20px;
+  }
+  .formcontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: min-content;
+    min-width: 250px;
+    margin: 30px 10px;
+  }
+}

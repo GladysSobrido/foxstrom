@@ -2,10 +2,11 @@
 // import React, { Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import "./Home.css";
-import { Rechner } from "../components/Rechner";
+// import { Rechner } from "../components/Rechner";
 import { InfoCard } from "../components/InfoCard";
 import { InfoCard2 } from "../components/InfoCard2";
 import infocards from "../data/infocards";
+import { Rech } from "../components/Rech";
 
 function Home() {
   const { t } = useTranslation();
@@ -19,7 +20,8 @@ function Home() {
           <p>{t("hero_paragraph")}</p>
         </div>
         <div className="rechner">
-          <Rechner />
+          {/* <Rechner /> */}
+          <Rech />
         </div>
       </div>
       {/* These are the cards

@@ -3,6 +3,38 @@ import { Outlet } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { Footer } from "./components/Footer";
 import "./styles/globalstyles.css";
+//Chakra components:
+import {
+  ChakraBaseProvider,
+  extendBaseTheme,
+  theme as chakraTheme,
+  InputRightAddon,
+} from "@chakra-ui/react";
+
+const {
+  Button,
+  Input,
+  InputGroup,
+  InputRightElement,
+  FormLabel,
+  FormHelperText,
+  PinInput,
+  PinInputField,
+} = chakraTheme.components;
+
+const theme = extendBaseTheme({
+  components: {
+    Button,
+    Input,
+    InputGroup,
+    InputRightElement,
+    InputRightAddon,
+    FormLabel,
+    FormHelperText,
+    PinInput,
+    PinInputField,
+  },
+});
 
 //Authentication with Clerk imports:
 import { ClerkProvider } from "@clerk/clerk-react";
@@ -27,9 +59,11 @@ export function RootLayout() {
         publishableKey={PUBLISHABLE_KEY}
         afterSignOutUrl="/"
       >
-        <NavBar />
-        <Outlet />
-        <Footer />
+        <ChakraBaseProvider theme={theme} resetCSS={false}>
+          <NavBar />
+          <Outlet />
+          <Footer />
+        </ChakraBaseProvider>
       </ClerkProvider>
     </>
   );

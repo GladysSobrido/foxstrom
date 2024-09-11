@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Rechner } from "../components/Rechner";
+// import { Rechner } from "../components/Rechner";
 import { useSearchParams } from "react-router-dom";
 import { TarifCard } from "../components/TarifCard";
+import { Rech } from "../components/Rech";
 
 const API = "http://localhost:3000";
 //"https://foxstrom.onrender.com";
@@ -138,7 +139,8 @@ export function Tarifs() {
   return (
     <>
       <div className="section2">
-        <Rechner />
+        {/* <Rechner /> */}
+        <Rech />
       </div>
       <div className="bg">
         <div className="section3">
