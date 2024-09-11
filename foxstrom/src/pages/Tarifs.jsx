@@ -6,7 +6,7 @@ import { TarifCard } from "../components/TarifCard";
 import { Rech } from "../components/Rech";
 import "./Tarifs.css";
 
-const API = "http://localhost:3000";
+const API = import.meta.env.VITE_APIURL;
 //"https://foxstrom.onrender.com";
 
 export function Tarifs() {
