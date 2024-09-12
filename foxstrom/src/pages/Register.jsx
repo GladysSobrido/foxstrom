@@ -30,7 +30,7 @@ const API = import.meta.env.VITE_APIURL;
 // Step 0= filling the form, step 1= introducing code, step 3= thank you for registering
 export function Register() {
   const { isLoaded, signUp, setActive } = useSignUp();
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(0);
   //taking tarif info from params
   const [searchParams] = useSearchParams();
   const tarif = searchParams.get("tarif");
@@ -260,8 +260,8 @@ export function Register() {
                     <Trans i18nKey="register9">E-Mail wird verifiziert</Trans>
                   </FormHelperText>
                 </FormControl>
-                {<p>{email}</p>}
-                {<p>{password}</p>}
+                {/* {<p>{email}</p>}
+                {<p>{password}</p>} */}
                 <FormControl mr="5%">
                   <FormLabel htmlFor="pass" fontWeight={"normal"}>
                     <Trans i18nKey="register10">Passwort</Trans>
