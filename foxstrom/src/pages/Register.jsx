@@ -5,6 +5,7 @@ import { useSignUp } from "@clerk/clerk-react";
 import { useTranslation, Trans } from "react-i18next";
 import { isClerkAPIResponseError } from "@clerk/clerk-react/errors";
 import { TarifResume } from "../components/TarifResume";
+import { Link } from "react-router-dom";
 import "./Register.css";
 import "../components/TarifCard.css";
 //Chakra form control
@@ -29,7 +30,7 @@ const API = import.meta.env.VITE_APIURL;
 // Step 0= filling the form, step 1= introducing code, step 3= thank you for registering
 export function Register() {
   const { isLoaded, signUp, setActive } = useSignUp();
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(2);
   //taking tarif info from params
   const [searchParams] = useSearchParams();
   const tarif = searchParams.get("tarif");
@@ -132,12 +133,14 @@ export function Register() {
         <>
           <div className="regHeader">
             <div className="formChakraContainer">
-              <TarifResume
-                tarif={tarif}
-                totalPrice={totalPrice}
-                nett={nett}
-                tax={tax}
-              />
+              <div className="tarifPosition">
+                <TarifResume
+                  tarif={tarif}
+                  totalPrice={totalPrice}
+                  nett={nett}
+                  tax={tax}
+                />
+              </div>
               {/* Name, surname */}{" "}
               <h1>
                 <Trans i18nKey="register1">Registrieren Sie</Trans>
@@ -330,14 +333,23 @@ export function Register() {
         <>
           <div className="regHeader">
             <div className="formChakraContainer">
-              <h2>
-                <Trans i18nKey="register13">Vielen Dank</Trans>
-              </h2>
-              <p>
-                <Trans i18nKey="register14">
-                  Now you can access your customer profile.
-                </Trans>
-              </p>
+              <div className="end">
+                <h2>
+                  <Trans i18nKey="register13">Vielen Dank</Trans>
+                </h2>
+                <p>
+                  <Trans i18nKey="register14">
+                    Now you can access your customer profile.
+                  </Trans>
+                </p>
+                <div>
+                  <Link to={`/private`}>
+                    <button className="registerButton" type="submit">
+                      <Trans i18nKey="register15">to your private area</Trans>
+                    </button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </>

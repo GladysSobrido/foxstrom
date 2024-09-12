@@ -11,7 +11,7 @@ export function TarifResume({
   console.log("tarif: ", tarif, "totalPrice: ", totalPrice);
   return (
     <div className="cardResume">
-      <p className="small">Gewählten Tarif:</p>
+      <p className="small">{t("tcard7")}</p>
       <p className="big">{tarif}</p>
       <div className="price">
         <p className="giant">{totalPrice} </p>

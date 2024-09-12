@@ -32,12 +32,15 @@
 .formChakraContainer h1 {
   margin: 30px 0px;
 }
-.cardResume {
-  display: flex;
-  flex-direction: column;
+.tarifPosition {
   position: absolute;
   top: -350px;
   right: -60px;
+}
+.cardResume {
+  display: flex;
+  flex-direction: column;
+
   align-items: flex-start;
   border: solid 1px;
   border-color: #fcfcfc;
@@ -75,6 +78,12 @@
 .strasse {
   width: 100%;
 }
+.end {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 15px;
+}
 @media (min-width: 900px) {
   .formChakraContainer {
     padding: 10px;
@@ -93,7 +102,7 @@
     min-width: 250px;
     margin: 30px 10px;
   }
-  .cardResume {
+  .tarifPosition {
     right: 30px;
   }
 }
