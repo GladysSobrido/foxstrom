@@ -4,7 +4,9 @@ import { useState } from "react";
 import { useSignUp } from "@clerk/clerk-react";
 import { useTranslation, Trans } from "react-i18next";
 import { isClerkAPIResponseError } from "@clerk/clerk-react/errors";
+import { TarifResume } from "../components/TarifResume";
 import "./Register.css";
+import "../components/TarifCard.css";
 //Chakra form control
 import {
   FormControl,
@@ -18,18 +20,35 @@ import {
   Flex,
   //Stack,
 } from "@chakra-ui/react";
+//Authentication
+import { useAuth } from "@clerk/clerk-react";
+import axios from "axios";
+// import { TarifCard } from "../components/TarifCard";
+const API = import.meta.env.VITE_APIURL;
 
 // Step 0= filling the form, step 1= introducing code, step 3= thank you for registering
 export function Register() {
   const { isLoaded, signUp, setActive } = useSignUp();
   const [step, setStep] = useState(0);
+  //taking tarif info from params
   const [searchParams] = useSearchParams();
   const tarif = searchParams.get("tarif");
+  const totalPrice = searchParams.get("price");
+  const nett = searchParams.get("nett");
+  const tax = searchParams.get("tax");
+  const [pin, setPin] = useState([null, null, null, null, null, null]);
+  console.log("tarif:", tarif, "totalPrice:", totalPrice);
+
+  //User data:
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [pin, setPin] = useState([null, null, null, null, null, null]);
-  console.log("tarif:", tarif);
-  //Show/hide password: Component PasswordInput
+  const [vorname, setVorname] = useState("");
+  const [nachname, setNachname] = useState("");
+  const [strasse, setStrasse] = useState("");
+  const [hausnummer, setHausnummer] = useState("");
+  const [postleitzahl, setPostleitzahl] = useState("");
+  const [ort, setOrt] = useState("");
+
   //Translation
   const { i18n } = useTranslation();
   console.log({ i18n });
@@ -50,12 +69,40 @@ export function Register() {
         console.log(err.errors);
       }
       console.error(JSON.stringify(err, null, 2));
-      console.log(err);
+      console.log("error:", err);
     }
   }
 
-  //bg4$17fgh
+  //Authentification connection with Clerk
 
+  const { getToken } = useAuth();
+  async function handleSaveTarif() {
+    try {
+      const token = await getToken();
+      await axios.post(
+        `${API}/customers`,
+        {
+          tarif,
+          price: totalPrice,
+          vorname,
+          nachname,
+          strasse,
+          hausnummer,
+          postleitzahl,
+          ort,
+          email,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  //1234LKjhg!
   async function handleVerification() {
     try {
       const strPin = pin.join("");
@@ -67,7 +114,8 @@ export function Register() {
       // and redirect the user
       if (completeSignUp.status === "complete") {
         await setActive({ session: completeSignUp.createdSessionId });
-        setStep(2); //API ANRUF KOMMT HIER
+        handleSaveTarif(); //API ANRUF - Kundendata ins Datenbank schreiben
+        setStep(2);
       } else {
         // If the status is not complete, check why. User may need to
         // complete further steps.
@@ -83,12 +131,17 @@ export function Register() {
       return (
         <>
           <div className="regHeader">
-            <h1>
-              <Trans i18nKey="register1">Registrieren Sie</Trans>
-            </h1>
-
             <div className="formChakraContainer">
-              {/* Name, surname */}
+              <TarifResume
+                tarif={tarif}
+                totalPrice={totalPrice}
+                nett={nett}
+                tax={tax}
+              />
+              {/* Name, surname */}{" "}
+              <h1>
+                <Trans i18nKey="register1">Registrieren Sie</Trans>
+              </h1>
               <Flex className="formcontainer">
                 <FormControl mr="5%">
                   <FormLabel htmlFor="vorname" fontWeight={"normal"}>
@@ -99,14 +152,25 @@ export function Register() {
                     id="vorname"
                     placeholder="Max"
                     className="inputfield"
+                    value={vorname}
+                    onChange={(event) => {
+                      setVorname(event.target.value);
+                    }}
                   />
                 </FormControl>
-
                 <FormControl mr="5%">
                   <FormLabel htmlFor="nachname" fontWeight={"normal"}>
                     <Trans i18nKey="register3">Last Name</Trans>
                   </FormLabel>
-                  <Input size="sm" id="nachname" placeholder="Mustermann" />
+                  <Input
+                    size="sm"
+                    id="nachname"
+                    placeholder="Mustermann"
+                    value={nachname}
+                    onChange={(event) => {
+                      setNachname(event.target.value);
+                    }}
+                  />
                 </FormControl>
               </Flex>
               {/* addresse */}
@@ -120,13 +184,25 @@ export function Register() {
                     id="strasse"
                     placeholder="Main Str. 1"
                     className="strasse"
+                    value={strasse}
+                    onChange={(event) => {
+                      setStrasse(event.target.value);
+                    }}
                   />
                 </FormControl>
                 <FormControl mr="5%">
                   <FormLabel htmlFor="hausnummer" fontWeight={"normal"}>
                     <Trans i18nKey="register5">Hausnummer</Trans>
                   </FormLabel>
-                  <Input size="sm" id="hausnummer" placeholder="1" />
+                  <Input
+                    size="sm"
+                    id="hausnummer"
+                    placeholder="1"
+                    value={hausnummer}
+                    onChange={(event) => {
+                      setHausnummer(event.target.value);
+                    }}
+                  />
                 </FormControl>
               </Flex>
               <Flex className="formcontainer">
@@ -141,13 +217,25 @@ export function Register() {
                     placeholder="10234"
                     className="inputfield"
                     type="number"
+                    value={postleitzahl}
+                    onChange={(event) => {
+                      setPostleitzahl(event.target.value);
+                    }}
                   />
                 </FormControl>
                 <FormControl mr="5%">
                   <FormLabel htmlFor="ort" fontWeight={"normal"}>
                     <Trans i18nKey="register7">Stadt</Trans>
                   </FormLabel>
-                  <Input size="sm" id="ort" placeholder="Bonn" />
+                  <Input
+                    size="sm"
+                    id="ort"
+                    placeholder="Bonn"
+                    value={ort}
+                    onChange={(event) => {
+                      setOrt(event.target.value);
+                    }}
+                  />
                 </FormControl>
               </Flex>
               {/*username, password */}

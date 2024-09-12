@@ -1,6 +1,7 @@
 import "../../styles/globalstyles.css";
 import { useAuth } from "@clerk/clerk-react";
 import axios from "axios";
+import { useEffect } from "react";
 
 const API = import.meta.env.VITE_APIURL;
 
@@ -8,22 +9,23 @@ console.log(API);
 
 export function InvoicesPage() {
   const { getToken } = useAuth();
-  async function handleSaveTarif() {
-    try {
-      const token = await getToken();
-      await axios.post(
-        `${API}/customers`,
-        { tarif: "FoxStudent" },
-        {
+  useEffect(() => {
+    async function loadProfile() {
+      try {
+        const token = await getToken();
+        const response = await axios.get(`${API}/customers/profile`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        }
-      );
-    } catch (err) {
-      console.log(err);
+        });
+        console.log(response.data);
+      } catch (err) {
+        console.log(err);
+      }
     }
-  }
+    loadProfile();
+  }, []);
+
   return (
     <>
       <header>
@@ -32,7 +34,6 @@ export function InvoicesPage() {
       <div className="section1">
         <div>Here you can see your invoices</div>
       </div>
-      <button onClick={handleSaveTarif}>Save tarifs</button>
     </>
   );
 }

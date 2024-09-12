@@ -1,14 +1,12 @@
 import "./TarifCard.css";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+
 export function TarifCard({ tarif }) {
   const { t } = useTranslation();
-  // const tarifName = "FoxTarif";
+
   const [element] = tarif;
-  // const totalPrice = 170.4;
-
   console.log("tarif: ", { tarif });
-
   return (
     <div className="card">
       {/* <p className="small">Dein Tarif:</p> */}
@@ -29,7 +27,9 @@ export function TarifCard({ tarif }) {
           {element.tax} {t("tcard5_2")}
         </p>
       </div>
-      <Link to={`/register?tarif=${element.id}`}>
+      <Link
+        to={`/register?tarif=${element.id}&price=${element.totalPrice}&nett=${element.nettPrice}&tax=${element.tax}`}
+      >
         <button className="registerButton" type="submit">
           {t("tcard6")}
         </button>
