@@ -3,12 +3,16 @@ import { useAuth } from "@clerk/clerk-react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Spinner } from "@chakra-ui/react";
+import { useTranslation, Trans } from "react-i18next";
 
 const API = import.meta.env.VITE_APIURL;
 
 console.log(API);
 
 export function InvoicesPage() {
+  const { i18n } = useTranslation();
+  console.log({ i18n });
+
   const { getToken } = useAuth();
   const [customer, setCustomer] = useState();
   useEffect(() => {
@@ -37,9 +41,17 @@ export function InvoicesPage() {
         <div className="section1">
           <div className="part1">
             <div className="textgroup">
-              <h4>Hier können Sie Ihre Rechnungen als pdf herunterladen:</h4>
+              <h4>
+                <Trans i18nKey="private5">
+                  Hier können Sie Ihre Rechnungen als pdf herunterladen:{" "}
+                </Trans>
+              </h4>
               <div className="row">
-                <p className="small">Sie haben noch keine Rechnungen.</p>
+                <p className="small">
+                  <Trans i18nKey="private6">
+                    Sie haben noch keine Rechnungen.{" "}
+                  </Trans>
+                </p>
               </div>
             </div>
           </div>

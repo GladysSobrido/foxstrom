@@ -1,4 +1,4 @@
-export function agb() {
+export function Agb() {
   return (
     <>
       <header className="stromHeader"></header>
@@ -9,7 +9,6 @@ export function agb() {
         perferendis, minima dicta ducimus. Laborum minus dolorum consequatur ad
         exercitationem perspiciatis voluptatum?
       </div>
-      ;
     </>
   );
 }

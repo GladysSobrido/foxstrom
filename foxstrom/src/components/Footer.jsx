@@ -31,13 +31,13 @@ export function Footer() {
       </div>
       <div className="foot2">
         <ul className="linksfoot2">
-          <Link>
+          <Link to={"/impressum"}>
             <Trans i18nKey="footer4">Impressum </Trans>
           </Link>
-          <Link>
+          <Link to={"/datenschutz"}>
             <Trans i18nKey="footer5">Datenschutz</Trans>{" "}
           </Link>
-          <Link>
+          <Link to={"/agb"}>
             <Trans i18nKey="footer6">AGB </Trans>
           </Link>
         </ul>

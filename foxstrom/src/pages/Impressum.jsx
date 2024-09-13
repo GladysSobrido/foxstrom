@@ -9,7 +9,6 @@ export function Impressum() {
         perferendis, minima dicta ducimus. Laborum minus dolorum consequatur ad
         exercitationem perspiciatis voluptatum?
       </div>
-      ;
     </>
   );
 }

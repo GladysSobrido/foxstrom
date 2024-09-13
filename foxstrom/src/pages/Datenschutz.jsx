@@ -9,7 +9,6 @@ export function Datenschutz() {
         perferendis, minima dicta ducimus. Laborum minus dolorum consequatur ad
         exercitationem perspiciatis voluptatum?
       </div>
-      ;
     </>
   );
 }
