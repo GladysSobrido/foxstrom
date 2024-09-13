@@ -19,6 +19,7 @@ export function TarifResume({
       </div>
       <div className="small">
         <p>{t("tcard2")}</p>
+        {console.log(tarif, totalPrice)}
         {/* <p>{t("tcard3")}</p>
          <p>
           {t("tcard4")}

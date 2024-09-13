@@ -1,4 +1,5 @@
 // import { Link } from "react-router-dom";
+import { useTranslation, Trans } from "react-i18next";
 import { Spinner } from "@chakra-ui/react";
 import "../../styles/globalstyles.css";
 import "./private.css";
@@ -11,6 +12,9 @@ import { useEffect, useState } from "react";
 const API = import.meta.env.VITE_APIURL;
 
 export function PrivatePage() {
+  const { i18n } = useTranslation();
+  console.log({ i18n });
+
   const { getToken } = useAuth();
   const [customer, setCustomer] = useState();
   useEffect(() => {
@@ -34,23 +38,36 @@ export function PrivatePage() {
     return (
       <>
         <header className="personalHeader"></header>
-        <h3>{customer ? `Willkommen, ${customer.vorname} ` : <Spinner />}</h3>
+        <h3>
+          {customer ? (
+            `${(<Trans i18nKey="private1">Willkommen</Trans>)} ${
+              customer.vorname
+            } `
+          ) : (
+            <Spinner />
+          )}
+        </h3>
         {console.log({ customer })}
         <div className="section1">
           <div className="part1">
-            <TarifResume tarif={customer.tarif} price={customer.price} />
-          </div>
-          <div className="part2">
             <div className="textgroup">
-              <h4>Ihre Persönliche daten:</h4>
+              <h4>
+                {" "}
+                <Trans i18nKey="private2">Ihre Persönliche daten:</Trans>
+              </h4>
               <div className="row">
-                <h5>Name: </h5>
+                <h5>
+                  {" "}
+                  <Trans i18nKey="private3">Name:</Trans>{" "}
+                </h5>
                 <p className="small">
                   {customer.vorname} {customer.nachname}
                 </p>
               </div>
               <div className="row">
-                <h5>Adresse: </h5>
+                <h5>
+                  <Trans i18nKey="private4">Adresse: </Trans>
+                </h5>
                 <p className="small">
                   {customer.strasse} {customer.hausnummer},
                 </p>
@@ -64,8 +81,10 @@ export function PrivatePage() {
                 </p>
               </div>
             </div>
+          </div>{" "}
+          <div className="part2">
+            <TarifResume tarif={customer.tarif} totalPrice={customer.price} />
           </div>
-
           {/* <Link to={"./invoices"}>See your invoices here</Link> */}
         </div>
       </>

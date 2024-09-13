@@ -81,6 +81,11 @@
   "register14": "Now you can access your customer profile.",
   "register15": "Personal area",
 
+  "private1": "Welcome, ",
+  "private2": "Your personal data: ",
+  "private3": "Name: ",
+  "private4": "Address: ",
+
   "footer1": "About us",
   "footer2": "Energy transition",
   "footer3": "Jobs",
