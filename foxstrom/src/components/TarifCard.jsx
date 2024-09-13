@@ -8,13 +8,16 @@ export function TarifCard({ tarif }) {
 
   const [element] = tarif;
   console.log("tarif: ", { tarif });
+
   return (
     <div className="card">
       {/* <p className="small">Dein Tarif:</p> */}
-      <p className="big">{!element ? <Spinner /> : `${element.tarifName}`}</p>
+      <p className="big">
+        {!isNaN(element.totalprice) ? <Spinner /> : `${element.tarifName}`}
+      </p>
       <div className="price">
         <p className="giant">
-          {element.totalprize ? <Spinner /> : `${element.totalPrice}`}
+          {!isNaN(element.totalprice) ? <Spinner /> : `${element.totalPrice}`}
         </p>
         <p className="medium">{t("tcard1")}</p>
       </div>
@@ -23,7 +26,7 @@ export function TarifCard({ tarif }) {
         <p>{t("tcard3")}</p>
         <p>
           {t("tcard4")}
-          {!element ? <Spinner /> : `${element.nettPrice}`}€
+          {!isNaN(element.totalprice) ? <Spinner /> : `${element.nettPrice}`}€
         </p>
         <p>
           {t("tcard5")}

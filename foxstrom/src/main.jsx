@@ -41,6 +41,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
+      { path: "*", element: <Home /> },
       {
         path: "strom",
         element: <Strom />,
