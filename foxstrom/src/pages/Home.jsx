@@ -81,7 +81,7 @@ function Home() {
         <div className="section2">
           <h2>{t("kombo1")}</h2>
           <p>{t("kombo2")}</p>
-          <img height="300px" src="public/stock/389_focus_img.JPG"></img>
+          <img height="300px" src="/stock/389_focus_img.JPG"></img>
           <h2>{t("kombo3")}</h2>
           <p>{t("kombo4")} </p>
         </div>
