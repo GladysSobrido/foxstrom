@@ -34,7 +34,7 @@
   "card1text": "Grün Strom für Ihr Haus",
 
   "card2title": "Solar Anlage",
-  "card2text": "Solar Anlage für Ihr Dach!",
+  "card2text": "Solar Anlage für Ihr Dach",
 
   "card3title": "Ladestation",
   "card3text": "Ihre Ladestation zu Hause",
@@ -60,6 +60,7 @@
   "tcard5": "Steuern (20%): ",
   "tcard5_2": "€",
   "tcard6": "Den will ich:",
+  "tcard7": "Gewählten Tarif:",
 
   "kontakt1": "Kontaktieren Sie uns",
   "kontakt2": "Schreiben sie uns ein Nachricht und wir werden wie schnell wie möglich beantworten.",
@@ -79,6 +80,14 @@
   "register12": "Bitte geben Sie den Code ein",
   "register13": "Vielen Dank für die Registrierung",
   "register14": "Jetzt können Sie auf Ihr Kundenprofil zugreifen",
+  "register15": "Personalbereich",
+
+  "private1": "Wilkommen, ",
+  "private2": "Ihre Persönliche daten: ",
+  "private3": "Name: ",
+  "private4": "Addresse: ",
+  "private5": "Here you can dowload your invoices in pdf:",
+  "private6": "You don´t have any invoices yet.",
 
   "footer1": "Über uns",
   "footer2": "EnergieWende",

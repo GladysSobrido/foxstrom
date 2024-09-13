@@ -48,6 +48,8 @@ if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key");
 }
 
+//Global context for the calculated price:
+
 export function RootLayout() {
   // const { t } = useTranslation();
   const navigate = useNavigate();

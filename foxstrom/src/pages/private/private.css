@@ -1,0 +1,32 @@
+.personalHeader {
+  background-image: url(/pexels-nietjuh-796602.jpg);
+  min-height: 250px;
+
+  color: rgb(0, 0, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  margin: 0px;
+  margin-bottom: 60px;
+  padding: 0px;
+}
+.textgroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+  margin: auto;
+  margin: 0px 50px 50px 50px;
+  padding: 10px;
+  gap: 15px;
+  /* border: solid 1px black; */
+  position: relative;
+}
+.row {
+  display: flex;
+  align-items: center;
+}
+.row h5 {
+  margin: 0px 15px;
+}
