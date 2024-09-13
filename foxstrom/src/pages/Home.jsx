@@ -19,6 +19,8 @@ function Home() {
           <h1>{t("hero_title")}</h1>
           <p>{t("hero_paragraph")}</p>
         </div>
+      </div>
+      <div className="hero2">
         <div className="rechner">
           {/* <Rechner /> */}
           <Rech />

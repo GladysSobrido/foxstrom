@@ -1,5 +1,16 @@
 .hero {
   background-color: var(--color-primary);
+  min-height: 800px;
+  /* background-image: url(/wild-fox_line2.png);
+  background-repeat: no-repeat;
+  grid-column-start: 1;
+  background-position: 220% -10%;
+
+  height: 110%;
+  max-width: 500%;
+  max-height: 300%; */
+  /* padding: 300px;
+  margin-left: -900px; */
 }
 .herotext {
   display: flex;
@@ -19,6 +30,11 @@
     grid-template-columns: 50% 50%;
     justify-items: end;
   }
+  .hero2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: end;
+  }
   .herotext {
     grid-column-start: 2;
     align-items: start;
@@ -31,15 +47,17 @@
     grid-column-start: 1;
     justify-content: end;
     align-items: end;
-    height: 110%;
+    height: 100%;
     max-width: 500%;
     max-height: 300%;
     margin-top: -30px;
-    margin-bottom: 110px;
+    /* margin-bottom: 110px; */
   }
   .rechner {
-    margin-top: -400px;
+    margin-top: -350px;
     margin-right: -250px;
+
+    height: 0px;
   }
 }
 
