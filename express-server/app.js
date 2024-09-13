@@ -6,7 +6,11 @@ const port = process.env.PORT || 3000;
 const connect = require("./lib/connect");
 const Plz = require("./models/plz");
 const Verbrauch = require("./models/verbrauch");
+const Customer = require("./models/customer");
+const { ClerkExpressRequireAuth } = require("@clerk/clerk-sdk-node");
+
 app.use(cors());
+app.use(express.json());
 
 app.get("/", (req, res) => res.type("html").send(html));
 
@@ -46,6 +50,57 @@ app.get("/plz/:range", async (req, res) => {
     res.json(plz);
   } else {
     res.status(404).json({ message: "Postalcode not found" });
+  }
+});
+app.get("/customers/profile", ClerkExpressRequireAuth(), async (req, res) => {
+  const userId = req.auth.claims.sub;
+  console.log("userID:", userId, typeof userId);
+  const customer = await Customer.findOne({ clerkUserId: userId });
+  return res.json(customer);
+});
+app.post("/customers", ClerkExpressRequireAuth(), async (req, res) => {
+  // {tarif, firstName, lastName, etc...}
+
+  try {
+    console.log(req.auth.claims);
+    const userId = req.auth.claims.sub;
+    const {
+      tarif,
+      price,
+      vorname,
+      nachname,
+      strasse,
+      hausnummer,
+      postleitzahl,
+      ort,
+      email,
+    } = req.body;
+
+    console.log(userId, tarif);
+
+    // store tarif with userId in MongoDB
+
+    const customer = new Customer({
+      clerkUserId: userId,
+      tarif,
+      price,
+      vorname,
+      nachname,
+      strasse,
+      hausnummer,
+      postleitzahl,
+      ort,
+      email,
+    });
+
+    await customer.save();
+
+    console.log("customer saved");
+
+    return res.json({ msg: "ok" });
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ msg: "Server error" });
   }
 });
 
