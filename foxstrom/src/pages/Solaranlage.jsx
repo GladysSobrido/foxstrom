@@ -51,7 +51,7 @@ export function Solaranlage() {
       </div>
       <div className="section1">
         <div className="part1">
-          <img src="public/stock/389_focus_img.JPG"></img>
+          <img src="/stock/389_focus_img.JPG"></img>
         </div>
         <div className="part2">
           <h2>

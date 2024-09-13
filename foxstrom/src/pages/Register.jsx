@@ -78,8 +78,10 @@ export function Register() {
 
   const { getToken } = useAuth();
   async function handleSaveTarif() {
+    console.log("handleSaveTarif has been called");
     try {
       const token = await getToken();
+      console.log("token received");
       await axios.post(
         `${API}/customers`,
         {
@@ -115,6 +117,7 @@ export function Register() {
       // and redirect the user
       if (completeSignUp.status === "complete") {
         await setActive({ session: completeSignUp.createdSessionId });
+        console.log("before handleSaveTarif");
         handleSaveTarif(); //API ANRUF - Kundendata ins Datenbank schreiben
         setStep(2);
       } else {
@@ -313,7 +316,7 @@ export function Register() {
                     );
                   })}
                 </PinInput>
-                <p>{JSON.stringify(pin)}</p>
+                {/* <p>{JSON.stringify(pin)}</p> */}
               </div>
               <Button
                 className="chakraButton"
