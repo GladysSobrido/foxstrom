@@ -46,12 +46,13 @@ body {
 button {
   padding: 10px;
   border: 0px;
-  border-radius: 5px;}
- /*
-    background-color: light-dark( rgba(255, 255, 255, 0.836), rgb(36, 13, 13));
-    color: light-dark(var(--color-primary),var(--color-primary));
-    border-color: light-dark(rgba(216, 215, 215, 0.801), rgba(27, 27, 27, 0.3));
+  border-radius: 5px;
 
+    background-color: rgba(231, 231, 231, 0.836);
+    color:var(--color-primary);
+    border-color:rgba(216, 215, 215, 0.801);
+ }
+ /*
 }
 button:disabled {
   background-color: light-dark(rgba(239, 239, 239, 0.3), rgb(88, 59, 59));
