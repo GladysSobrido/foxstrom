@@ -38,4 +38,5 @@ button {
 button:disabled {
   color: black;
   font-weight: 600;
+
 }

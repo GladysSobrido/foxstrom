@@ -10,6 +10,8 @@ import {
   theme as chakraTheme,
   InputRightAddon,
 } from "@chakra-ui/react";
+//color mode for chakra
+import { ColorModeScript } from '@chakra-ui/react'
 
 const {
   Button,
@@ -21,7 +23,10 @@ const {
   PinInput,
   PinInputField,
 } = chakraTheme.components;
-
+const config={
+   initialColorMode: 'system',
+  useSystemColorMode:'true'
+}
 const theme = extendBaseTheme({
   components: {
     Button,
@@ -33,8 +38,11 @@ const theme = extendBaseTheme({
     FormHelperText,
     PinInput,
     PinInputField,
+  }, 
+  config
+ 
   },
-});
+);
 
 //Authentication with Clerk imports:
 import { ClerkProvider } from "@clerk/clerk-react";
@@ -62,6 +70,7 @@ export function RootLayout() {
         afterSignOutUrl="/"
       >
         <ChakraBaseProvider theme={theme} resetCSS={false}>
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <NavBar />
           <Outlet />
           <Footer />

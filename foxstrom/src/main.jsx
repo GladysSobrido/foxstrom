@@ -25,6 +25,7 @@ import { Impressum } from "./pages/Impressum.jsx";
 import { Datenschutz } from "./pages/Datenschutz.jsx";
 import { Agb } from "./pages/AGB.jsx";
 
+
 // Clerk: Import your publishable key
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
