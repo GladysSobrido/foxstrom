@@ -5,9 +5,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: ligth-dark(rgba(0, 0, 0, 0.87), white);
-  background-color: ligth-dark(#ffffff, rgb(16, 16, 16));
+  color-scheme: light ;
+  color: (0, 0, 0, 0.87);
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,8 +24,8 @@ body {
   font-weight: 400;
 
   color-scheme: light dark;
-  color: ligth-dark(rgba(0, 0, 0, 0.87), white);
-  background-color: ligth-dark(#ffffff, rgb(16, 16, 16));
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -38,7 +38,7 @@ body {
 }
 
 .kontakt {
-  background-color: ligth-dark(white, white);
+  background-color: white;
   max-width: 1200px;
   margin: auto;
 }
@@ -46,8 +46,8 @@ body {
 button {
   padding: 10px;
   border: 0px;
-  border-radius: 5px;
- 
+  border-radius: 5px;}
+ /*
     background-color: light-dark( rgba(255, 255, 255, 0.836), rgb(36, 13, 13));
     color: light-dark(var(--color-primary),var(--color-primary));
     border-color: light-dark(rgba(216, 215, 215, 0.801), rgba(27, 27, 27, 0.3));
@@ -57,7 +57,8 @@ button:disabled {
   background-color: light-dark(rgba(239, 239, 239, 0.3), rgb(88, 59, 59));
   color: light-dark(rgba(16, 16, 16, 0.3), rgb(248, 195, 195));
   border-color: light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));
-}
+}*/
+
 .infocards {
   display: flex;
   flex-wrap: wrap;
@@ -80,8 +81,8 @@ button:disabled {
   font-size: 50px;
 }
 .bg {
-  color: light-dark(rgb(0, 0, 0), rgb(198, 198, 198));
-  background-color: light-dark(rgba(156, 123, 177, 0.441), rgba(17, 17, 17));
+  color: rgb(0, 0, 0);
+  background-color: rgba(156, 123, 177, 0.441);
   /* background-color: light-dark(rgb(138, 120, 150), rgba(17, 17, 17)); */
   background-image: url(/drawing1.png);
   background-repeat: no-repeat;

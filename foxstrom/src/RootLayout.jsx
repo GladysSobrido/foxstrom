@@ -23,10 +23,7 @@ const {
   PinInput,
   PinInputField,
 } = chakraTheme.components;
-const config={
-   initialColorMode: 'system',
-  useSystemColorMode:'true'
-}
+
 const theme = extendBaseTheme({
   components: {
     Button,
@@ -38,8 +35,7 @@ const theme = extendBaseTheme({
     FormHelperText,
     PinInput,
     PinInputField,
-  }, 
-  config
+  }
  
   },
 );
@@ -70,7 +66,7 @@ export function RootLayout() {
         afterSignOutUrl="/"
       >
         <ChakraBaseProvider theme={theme} resetCSS={false}>
-        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      
           <NavBar />
           <Outlet />
           <Footer />
